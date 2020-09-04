@@ -1,0 +1,159 @@
+sys.version
+3.6.9 (default, Jul 17 2020, 12:50:27) 
+[GCC 8.4.0]
+
+tf.__version__
+2.3.0
+
+keras.__version__
+2.4.0
+
+Ubuntu 18.04.3 LTS \n \l
+
+H/W path    Device  Class      Description
+==========================================
+                    system     Computer
+/0                  bus        Motherboard
+/0/0                memory     25GiB System memory
+/0/1                processor  Intel(R) Xeon(R) CPU @ 2.30GHz
+/0/100              bridge     440FX - 82441FX PMC [Natoma]
+/0/100/1            bridge     82371AB/EB/MB PIIX4 ISA
+/0/100/1.3          bridge     82371AB/EB/MB PIIX4 ACPI
+/0/100/3            generic    Virtio SCSI
+/0/100/3/0          generic    Virtual I/O device
+/0/100/4            display    GP100GL [Tesla P100 PCIe 16GB]
+/0/100/5            network    Virtio network device
+/0/100/5/0          network    Virtual I/O device
+/0/100/6            generic    Virtio RNG
+/0/100/6/0          generic    Virtual I/O device
+/1          eth0    network    Ethernet interface
+ 
+Tue Aug  4 05:42:14 2020       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.57       Driver Version: 418.67       CUDA Version: 10.1     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla P100-PCIE...  Off  | 00000000:00:04.0 Off |                    0 |
+| N/A   41C    P0    29W / 250W |      0MiB / 16280MiB |      0%      Default |
+|                               |                      |                 ERR! |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+
+imdb adadelta lstm 1
+started at 2020/08/04 14:42:20:931046
+finished at 2020/08/04 15:01:00:074533
+
+imdb adadelta lstm 2
+started at 2020/08/04 15:01:05:974385
+finished at 2020/08/04 15:19:43:461463
+
+imdb adadelta lstm 3
+started at 2020/08/04 15:19:49:084901
+finished at 2020/08/04 15:38:29:975036
+
+imdb adagrad lstm 1
+started at 2020/08/04 15:38:36:276659
+finished at 2020/08/04 15:57:12:589958
+
+imdb adagrad lstm 2
+started at 2020/08/04 15:57:18:583322
+finished at 2020/08/04 16:15:54:749758
+
+imdb adagrad lstm 3
+started at 2020/08/04 16:16:01:233376
+finished at 2020/08/04 16:34:34:489245
+
+imdb adam lstm 1
+started at 2020/08/04 16:34:40:974424
+finished at 2020/08/04 16:53:59:070770
+
+imdb adam lstm 2
+started at 2020/08/04 16:54:05:263025
+finished at 2020/08/04 17:13:22:327360
+
+imdb adam lstm 3
+started at 2020/08/04 17:13:28:881431
+finished at 2020/08/04 17:32:51:782833
+
+imdb adamax lstm 1
+started at 2020/08/04 17:32:58:461418
+finished at 2020/08/04 17:52:03:589436
+
+imdb adamax lstm 2
+started at 2020/08/04 17:52:09:785925
+finished at 2020/08/04 18:11:08:534643
+
+imdb adamax lstm 3
+started at 2020/08/04 18:11:14:893140
+finished at 2020/08/04 18:30:23:425993
+
+imdb momentum lstm 1
+started at 2020/08/04 18:30:30:451885
+finished at 2020/08/04 18:49:06:100358
+
+imdb momentum lstm 2
+started at 2020/08/04 18:49:12:240511
+finished at 2020/08/04 19:07:24:576522
+
+imdb momentum lstm 3
+started at 2020/08/04 19:07:30:388011
+finished at 2020/08/04 19:25:29:208677
+
+imdb nadam lstm 1
+started at 2020/08/04 19:25:35:213414
+finished at 2020/08/04 19:44:23:192614
+
+imdb nadam lstm 2
+started at 2020/08/04 19:44:29:532274
+finished at 2020/08/04 20:03:25:146740
+
+imdb nadam lstm 3
+started at 2020/08/04 20:03:31:477202
+finished at 2020/08/04 20:23:07:319228
+
+imdb nesterov lstm 1
+started at 2020/08/04 20:23:13:917030
+finished at 2020/08/04 20:41:54:534401
+
+imdb nesterov lstm 2
+started at 2020/08/04 20:42:01:038811
+finished at 2020/08/04 21:00:41:055635
+
+imdb nesterov lstm 3
+started at 2020/08/04 21:00:47:470591
+finished at 2020/08/04 21:19:29:548764
+
+imdb rmsprop lstm 1
+started at 2020/08/04 21:19:37:116058
+finished at 2020/08/04 21:38:09:924116
+
+imdb rmsprop lstm 2
+started at 2020/08/04 21:38:16:348952
+finished at 2020/08/04 21:56:52:156424
+
+imdb rmsprop lstm 3
+started at 2020/08/04 21:56:58:668669
+finished at 2020/08/04 22:15:42:367445
+
+imdb sgd lstm 1
+started at 2020/08/04 22:15:49:225150
+finished at 2020/08/04 22:35:47:899099
+
+imdb sgd lstm 2
+started at 2020/08/04 22:35:54:479375
+finished at 2020/08/04 22:55:50:009047
+
+imdb sgd lstm 3
+started at 2020/08/04 22:55:56:567805
+finished at 2020/08/04 23:15:49:026834

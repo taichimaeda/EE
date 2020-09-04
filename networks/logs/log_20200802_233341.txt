@@ -1,0 +1,118 @@
+sys.version
+3.6.9 (default, Jul 17 2020, 12:50:27) 
+[GCC 8.4.0]
+
+tf.__version__
+2.2.0
+
+keras.__version__
+2.3.0-tf
+
+Ubuntu 18.04.3 LTS \n \l
+
+H/W path    Device  Class      Description
+==========================================
+                    system     Computer
+/0                  bus        Motherboard
+/0/0                memory     12GiB System memory
+/0/1                processor  Intel(R) Xeon(R) CPU @ 2.20GHz
+/0/100              bridge     440FX - 82441FX PMC [Natoma]
+/0/100/1            bridge     82371AB/EB/MB PIIX4 ISA
+/0/100/1.3          bridge     82371AB/EB/MB PIIX4 ACPI
+/0/100/3            generic    Virtio SCSI
+/0/100/3/0          generic    Virtual I/O device
+/0/100/4            display    NVIDIA Corporation
+/0/100/5            network    Virtio network device
+/0/100/5/0          network    Virtual I/O device
+/0/100/6            generic    Virtio RNG
+/0/100/6/0          generic    Virtual I/O device
+/1          eth0    network    Ethernet interface
+ 
+Sun Aug  2 14:33:42 2020       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.57       Driver Version: 418.67       CUDA Version: 10.1     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla T4            Off  | 00000000:00:04.0 Off |                    0 |
+| N/A   39C    P8     9W /  70W |      0MiB / 15079MiB |      0%      Default |
+|                               |                      |                 ERR! |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+
+cifar10 adadelta lenet 1
+started at 2020/08/02 23:34:09:266791
+finished at 2020/08/02 23:49:02:697039
+
+cifar10 adadelta lenet 2
+started at 2020/08/02 23:49:03:411303
+finished at 2020/08/03 00:03:45:137416
+
+cifar10 adadelta lenet 3
+started at 2020/08/03 00:03:45:837266
+finished at 2020/08/03 00:18:28:131220
+
+cifar10 adagrad lenet 1
+started at 2020/08/03 00:18:29:674212
+finished at 2020/08/03 00:33:06:933603
+
+cifar10 adagrad lenet 2
+started at 2020/08/03 00:33:07:636916
+finished at 2020/08/03 00:47:40:225891
+
+cifar10 adagrad lenet 3
+started at 2020/08/03 00:47:40:908274
+finished at 2020/08/03 01:02:12:775625
+
+cifar10 adam lenet 1
+started at 2020/08/03 01:02:14:200064
+finished at 2020/08/03 01:16:40:797316
+
+cifar10 adam lenet 2
+started at 2020/08/03 01:16:41:483673
+finished at 2020/08/03 01:31:09:336932
+
+cifar10 adam lenet 3
+started at 2020/08/03 01:31:10:047981
+finished at 2020/08/03 01:45:37:079047
+
+cifar10 adamax lenet 1
+started at 2020/08/03 01:45:38:581106
+finished at 2020/08/03 02:00:10:244007
+
+cifar10 adamax lenet 2
+started at 2020/08/03 02:00:10:976472
+finished at 2020/08/03 02:14:43:437773
+
+cifar10 adamax lenet 3
+started at 2020/08/03 02:14:44:161851
+finished at 2020/08/03 02:29:17:285687
+
+cifar10 momentum lenet 1
+started at 2020/08/03 02:29:18:837944
+finished at 2020/08/03 02:43:38:131701
+
+cifar10 momentum lenet 2
+started at 2020/08/03 02:43:38:844594
+finished at 2020/08/03 02:58:01:092491
+
+cifar10 momentum lenet 3
+started at 2020/08/03 02:58:01:799927
+finished at 2020/08/03 03:12:22:794919
+
+cifar10 nadam lenet 1
+started at 2020/08/03 03:12:24:228516
+finished at 2020/08/03 03:28:14:856875
+
+cifar10 nadam lenet 2
+started at 2020/08/03 03:28:15:562893

@@ -1,0 +1,2 @@
+- The distance of each starting point is stored in `data/[dataset name]_[optimizer name]/results.csv` 
+- The average time duration required for each step is stored in `data/[dataset name]_[optimizer name]/time.csv` 

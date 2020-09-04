@@ -1,0 +1,46 @@
+{
+    "adadelta": {
+        "learning_rate": [1e-4, 1.0],
+        "rho": [0.1, 0.9999999999],
+        "epsilon": [1e-7, 1e-4]
+    },
+    "adagrad": {
+        "learning_rate": [1e-4, 1.0],
+        "initial_accumulator_value": [0.1, 0.9999999999],
+        "epsilon": [1e-8, 1e-4]
+    },
+    "adam": {
+        "learning_rate": [1e-4, 1.0],
+        "beta_1": [0.1, 0.9999999999],
+        "beta_2": [0.1, 0.9999999999],
+        "epsilon": [1e-8, 1e-4]
+    },
+    "adamax": {
+        "learning_rate": [1e-4, 1.0],
+        "beta_1": [0.1, 0.9999999999],
+        "beta_2": [0.1, 0.9999999999],
+        "epsilon": [1e-8, 1e-4]
+    },
+    "momentum": {
+        "learning_rate": [1e-4, 1.0],
+        "momentum": [0.1, 0.9999999999]
+    },
+    "nadam": {
+        "learning_rate": [1e-4, 1.0],
+        "beta_1": [0.1, 0.9999999999],
+        "beta_2": [0.1, 0.9999999999],
+        "epsilon": [1e-8, 1e-4]
+    },
+    "nesterov": {
+        "learning_rate": [1e-4, 1.0],
+        "momentum": [0.1, 0.9999999999]
+    },
+    "rmsprop": {
+        "learning_rate": [1e-4, 1.0],
+        "rho": [0.1, 0.9999999999],
+        "epsilon": [1e-8, 1e-4]
+    },
+    "sgd": {
+        "learning_rate": [1e-4, 1.0]
+    }
+}

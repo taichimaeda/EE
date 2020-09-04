@@ -1,0 +1,159 @@
+sys.version
+3.6.9 (default, Jul 17 2020, 12:50:27) 
+[GCC 8.4.0]
+
+tf.__version__
+2.3.0
+
+keras.__version__
+2.4.0
+
+Ubuntu 18.04.3 LTS \n \l
+
+H/W path    Device  Class      Description
+==========================================
+                    system     Computer
+/0                  bus        Motherboard
+/0/0                memory     25GiB System memory
+/0/1                processor  Intel(R) Xeon(R) CPU @ 2.30GHz
+/0/100              bridge     440FX - 82441FX PMC [Natoma]
+/0/100/1            bridge     82371AB/EB/MB PIIX4 ISA
+/0/100/1.3          bridge     82371AB/EB/MB PIIX4 ACPI
+/0/100/3            generic    Virtio SCSI
+/0/100/3/0          generic    Virtual I/O device
+/0/100/4            display    GP100GL [Tesla P100 PCIe 16GB]
+/0/100/5            network    Virtio network device
+/0/100/5/0          network    Virtual I/O device
+/0/100/6            generic    Virtio RNG
+/0/100/6/0          generic    Virtual I/O device
+/1          eth0    network    Ethernet interface
+ 
+Wed Aug  5 00:07:55 2020       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.57       Driver Version: 418.67       CUDA Version: 10.1     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla P100-PCIE...  Off  | 00000000:00:04.0 Off |                    0 |
+| N/A   35C    P0    26W / 250W |      0MiB / 16280MiB |      0%      Default |
+|                               |                      |                 ERR! |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+
+mnist adadelta lenet 1
+started at 2020/08/05 09:08:04:313725
+finished at 2020/08/05 09:16:39:307812
+
+mnist adadelta lenet 2
+started at 2020/08/05 09:16:39:709603
+finished at 2020/08/05 09:25:09:133881
+
+mnist adadelta lenet 3
+started at 2020/08/05 09:25:09:516201
+finished at 2020/08/05 09:33:37:984206
+
+mnist adagrad lenet 1
+started at 2020/08/05 09:33:39:070222
+finished at 2020/08/05 09:42:04:383609
+
+mnist adagrad lenet 2
+started at 2020/08/05 09:42:04:766975
+finished at 2020/08/05 09:50:22:752292
+
+mnist adagrad lenet 3
+started at 2020/08/05 09:50:23:295034
+finished at 2020/08/05 09:58:43:183558
+
+mnist adam lenet 1
+started at 2020/08/05 09:58:44:106989
+finished at 2020/08/05 10:07:02:733905
+
+mnist adam lenet 2
+started at 2020/08/05 10:07:03:142873
+finished at 2020/08/05 10:15:24:037664
+
+mnist adam lenet 3
+started at 2020/08/05 10:15:24:401805
+finished at 2020/08/05 10:23:43:388217
+
+mnist adamax lenet 1
+started at 2020/08/05 10:23:44:419874
+finished at 2020/08/05 10:32:08:447158
+
+mnist adamax lenet 2
+started at 2020/08/05 10:32:08:825136
+finished at 2020/08/05 10:40:35:517593
+
+mnist adamax lenet 3
+started at 2020/08/05 10:40:35:906326
+finished at 2020/08/05 10:49:02:517324
+
+mnist momentum lenet 1
+started at 2020/08/05 10:49:03:535499
+finished at 2020/08/05 10:57:18:161916
+
+mnist momentum lenet 2
+started at 2020/08/05 10:57:18:552979
+finished at 2020/08/05 11:05:34:057472
+
+mnist momentum lenet 3
+started at 2020/08/05 11:05:34:493382
+finished at 2020/08/05 11:13:49:252544
+
+mnist nadam lenet 1
+started at 2020/08/05 11:13:50:122217
+finished at 2020/08/05 11:23:15:184154
+
+mnist nadam lenet 2
+started at 2020/08/05 11:23:15:555670
+finished at 2020/08/05 11:32:40:808204
+
+mnist nadam lenet 3
+started at 2020/08/05 11:32:41:184509
+finished at 2020/08/05 11:42:06:497523
+
+mnist nesterov lenet 1
+started at 2020/08/05 11:42:08:079094
+finished at 2020/08/05 11:50:25:922154
+
+mnist nesterov lenet 2
+started at 2020/08/05 11:50:26:304142
+finished at 2020/08/05 11:58:45:349536
+
+mnist nesterov lenet 3
+started at 2020/08/05 11:58:45:720367
+finished at 2020/08/05 12:07:01:252229
+
+mnist rmsprop lenet 1
+started at 2020/08/05 12:07:02:323285
+finished at 2020/08/05 12:15:25:112070
+
+mnist rmsprop lenet 2
+started at 2020/08/05 12:15:25:486756
+finished at 2020/08/05 12:23:50:013926
+
+mnist rmsprop lenet 3
+started at 2020/08/05 12:23:50:399967
+finished at 2020/08/05 12:32:12:842148
+
+mnist sgd lenet 1
+started at 2020/08/05 12:32:13:848865
+finished at 2020/08/05 12:40:21:574709
+
+mnist sgd lenet 2
+started at 2020/08/05 12:40:21:949706
+finished at 2020/08/05 12:48:30:045463
+
+mnist sgd lenet 3
+started at 2020/08/05 12:48:30:401039
+finished at 2020/08/05 12:56:36:634317
