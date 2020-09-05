@@ -28,12 +28,15 @@ class Experiment:
 
     def begin(self):
         """ begin experiment """
+        # ignore overflow and nan warnings
+        np.seterr(all='ignore')
+        
         # set starting coordinates
         # seed is set to 0
         np.random.seed(0)
         coords = np.array([np.random.rand(100).astype(np.float128) * 10 - 5 for _ in range(2)])
-        optimum = np.array(self.benchmark.optimum).reshape(2, 1)
-        optimum_dec = np.array([Decimal(str(t)) for t in optimum])
+        optimum_dec = np.array([Decimal(str(t)) for t in self.benchmark.optimum])
+        optimum_dec = optimum_dec.reshape(2, 1)
 
         dists_history = []
         time_history = []
@@ -41,10 +44,8 @@ class Experiment:
         for i in range(10000):
             coords = self.optimizer.update(coords)
             if i % 100 == 0:
-                if np.any(np.isnan(coords)) or np.any(np.isinf(coords)):
-                    break
                 coords_dec = np.array([[Decimal(str(t)) for t in coords[i]] for i in range(2)])
-                dists = (np.sum(coords_dec - optimum_dec, axis=0) ** 2.0) ** 0.5
+                dists = (np.sum(coords_dec - optimum_dec, axis=0) ** Decimal('2.0')) ** Decimal('0.5')
                 dists_history.append(dists)
                 time_history.append((datetime.now() - start).total_seconds() / 100)
                 start = datetime.now()
@@ -55,8 +56,7 @@ class Experiment:
             header = ['step', *[f'#{i + 1}' for i in range(len(dists_history[0]))]]
             writer.writerow(header)
             for i in range(len(dists_history)):
-                row = [(i + 1) * 100,
-                       *dists_history[i]]
+                row = [(i + 1) * 100, *dists_history[i]]
                 writer.writerow(row)
 
         # save time history

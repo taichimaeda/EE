@@ -72,28 +72,25 @@ class Experiment:
     @logger.write
     def begin(self):
         """ begin experiment """
-        try:
-            # get data
-            (x_train, y_train), (x_test, y_test) = self.dataset.get_batch()
-            # start learning
-            self.model.compile(loss=self.loss, optimizer=self.optimizer, metrics=['accuracy'])
-            self.model.fit(
-                x_train,
-                y_train,
-                batch_size=self.batch_size,
-                epochs=self.epochs,
-                validation_split=0.2,
-                callbacks=self.callbacks,
-                verbose=2
-            )
+        # get data and compile model
+        (x_train, y_train), (x_test, y_test) = self.dataset.get_batch()
+        self.model.compile(loss=self.loss, optimizer=self.optimizer, metrics=['accuracy'])
 
-            # print final scores
-            score = self.model.evaluate(x_test, y_test, verbose=1)
-            print('test loss:', score[0])
-            print('test accuracy:', score[1])
+        # start learning
+        self.model.fit(
+            x_train,
+            y_train,
+            batch_size=self.batch_size,
+            epochs=self.epochs,
+            validation_split=0.2,
+            callbacks=self.callbacks,
+            verbose=2
+        )
 
-        # catch keyboard interrupt to stop hyperdash experiment
-        except KeyboardInterrupt:
-            pass
-        finally:
-            self.hd_exp.end()
+        # print final scores
+        score = self.model.evaluate(x_test, y_test, verbose=1)
+        print('test loss:', score[0])
+        print('test accuracy:', score[1])
+
+        # stop hyperdash experiment
+        self.hd_exp.end()

@@ -1,3 +1,4 @@
+import numpy as np
 from enum import Enum
 
 
@@ -15,7 +16,7 @@ class Adadelta:
         self.G = self.beta * self.G + (1 - self.beta) * grads ** 2.0
         d = - (self.D + self.eps) ** 0.5 / (self.G + self.eps) ** 0.5 * grads
         self.D = self.beta * self.D + (1 - self.beta) * d ** 2.0
-        coords += d
+        coords += self.lr * d
         return coords
 
 
@@ -124,7 +125,7 @@ class Nesterov:
 
     def update(self, coords):
         grads = self.benchmark.grads(coords - self.gamma * self.v)
-        self.v = self.gamma * self.v + grads
+        self.v = self.gamma * self.v + self.lr * grads
         coords -= self.v
         return coords
 

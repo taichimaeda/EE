@@ -79,21 +79,21 @@ class Rosenbrock:
         return grads
 
 
-class Sphere:
-    def __init__(self):
-        self.optimum = (0.0, 0.0)
-
-    def grads(self, coords):
-        x, y = coords
-        def d(t):
-            return 2.0 * t
-        grads = np.array([d(x), d(y)])
-        return grads
+# class Sphere:
+#     def __init__(self):
+#         self.optimum = (0.0, 0.0)
+#
+#     def grads(self, coords):
+#         x, y = coords
+#         def d(t):
+#             return 2.0 * t
+#         grads = np.array([d(x), d(y)])
+#         return grads
 
 
 class Benchmarks(Enum):
     """ enum class handling all the benchmark classes """
-    SPHERE = Sphere
+    # SPHERE = Sphere
     ECLIPSE = Eclipse
     ACKLEY = Ackley
     ROSENBROCK = Rosenbrock

@@ -8,8 +8,10 @@ from bayes_opt.event import Events
 from loader import Datasets
 from loader import Models
 from loader import Optimizers
+from loader import Hyperdash
 from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.callbacks import TerminateOnNaN
+from hyperdash import Experiment as HyperdashExperiment
 
 
 class Optimization:
@@ -67,16 +69,31 @@ class Optimization:
         model = Models.get(self.model_name, dataset=dataset)
         optimizer = Optimizers.get(self.optimizer_name, params=params)
 
+        # create and configure hyperdash experiment
+        def get_api_key():
+            with open('../../config.json', 'r') as f:
+                config = json.load(f)
+                return config['hyperdash']['api_key']
+
+        hd_exp = HyperdashExperiment(f'{self.dataset_name}', api_key_getter=get_api_key)
+        hd_exp.param('dataset_name', self.dataset_name)
+        hd_exp.param('model_name', self.model_name)
+        hd_exp.param('optimizer_name', self.optimizer_name)
+        for k, v in params.items():
+            hd_exp.param(k, v)
+
         # set callbacks
         callbacks = [
+            Hyperdash(['val_loss', 'loss', 'val_accuracy', 'accuracy'], hd_exp),
             EarlyStopping('val_loss', min_delta=0.1, patience=epochs // 10, verbose=1),
             TerminateOnNaN()
         ]
 
-        # get data
+        # get data and compile model
         (x_train, y_train), *_ = dataset.get_batch()
-        # start learning
         model.compile(loss=loss, optimizer=optimizer, metrics=['accuracy'])
+
+        # start learning
         history = model.fit(
             x_train,
             y_train,
@@ -87,7 +104,11 @@ class Optimization:
             verbose=2
         )
 
-        # return best val_loss for bayesian optimization
-        val_loss = np.array(history.history['val_loss'])
-        val_loss[np.isnan(val_loss)] = np.inf
-        return min(val_loss)
+        # stop hyperdash experiment
+        hd_exp.end()
+
+        # return min val_loss for bayesian optimization
+        # multiply by negative 1 for maximazing with bayesian optimization
+        ret = np.array(history.history['val_loss'])
+        ret[np.isnan(ret)] = 1e10
+        return min(ret) * (-1.0)

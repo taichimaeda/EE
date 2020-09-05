@@ -16,6 +16,7 @@ sys.path.append(target_dir)
 from datasets import Datasets
 from models import Models
 from optimizers import Optimizers
+from callbacks.hyperdash import Hyperdash
 
 sys.path.remove(target_dir)
 sys.path.append(current_dir)

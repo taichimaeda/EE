@@ -54,25 +54,27 @@ class Optimization:
         benchmark = Benchmarks.get(self.benchmark_name)
         optimizer = Optimizers.get(self.optimizer_name, benchmark=benchmark, params=params)
 
+        # ignore overflow and nan warnings
+        np.seterr(all='ignore')
+
         # set starting coordinates
         # seed is set to 0
         np.random.seed(0)
         coords = [np.random.rand(100).astype(np.float128) * 10 - 5 for _ in range(2)]
-        optimum = np.array(benchmark.optimum).reshape(2, 1)
-        optimum_dec = np.array([Decimal(str(t)) for t in optimum])
+        optimum_dec = np.array([Decimal(str(t)) for t in benchmark.optimum])
+        optimum_dec = optimum_dec.reshape(2, 1)
 
         dists_history = []
         for i in range(10000):
             coords = optimizer.update(coords)
             if i % 100 == 0:
-                if np.any(np.isnan(coords)) or np.any(np.isinf(coords)):
-                    break
                 # use decimal for precision
                 coords_dec = np.array([[Decimal(str(t)) for t in coords[i]] for i in range(2)])
-                dists = (np.sum(coords_dec - optimum_dec, axis=0) ** 2.0) ** 0.5
+                dists = (np.sum(coords_dec - optimum_dec, axis=0) ** Decimal('2.0')) ** Decimal('0.5')
                 dists_history.append(dists)
 
         # return min distance from the optimum solution
         # multiply by negative 1 for maximazing with bayesian optimization
-        dists_ave = np.average(dists_history, axis=1)
-        return float(min(dists_ave).log10()) * (-1.0)
+        ret = np.average(dists_history, axis=1)
+        ret = min([Decimal('1e10') if t.is_nan() else t for t in ret])
+        return float(ret.log10()) * (-1.0)
