@@ -73,7 +73,7 @@ class Optimization:
         # initialize coordinates
         # random seed is set to 0
         np.random.seed(0)
-        coords = [np.random.rand(100).astype(np.float128) * 10 - 5 for _ in range(2)]
+        coords = np.array([np.random.rand(100).astype(np.float128) * 10 - 5 for _ in range(2)])
         optimum_dec = np.array([Decimal(str(t)) for t in self.benchmark.optimum])
         optimum_dec = optimum_dec.reshape(2, 1)
 
