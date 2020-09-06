@@ -1,5 +1,6 @@
 tensorboard/ filter=lfs diff=lfs merge=lfs -text
 result.csv filter=lfs diff=lfs merge=lfs -text
 time.csv filter=lfs diff=lfs merge=lfs -text
+test.json filter=lfs diff=lfs merge=lfs -text
 result.json filter=lfs diff=lfs merge=lfs -text
 log.json filter=lfs diff=lfs merge=lfs -text

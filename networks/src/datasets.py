@@ -1,10 +1,11 @@
-from enum import Enum
 from tensorflow.keras.datasets import cifar10
 from tensorflow.keras.datasets import fashion_mnist
 from tensorflow.keras.datasets import imdb
 from tensorflow.keras.datasets import mnist
 from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.preprocessing.sequence import pad_sequences
+import numpy as np
+from enum import Enum
 
 
 class Singleton:
@@ -36,7 +37,7 @@ class Cifar10(Singleton):
         if is_label:
             data = to_categorical(data, self.num_classes)
         else:
-            data = data.astype('float32')
+            data = data.astype(np.float32)
             data /= 255.0
             shape = (data.shape[0],) + self.image_shape
             data = data.reshape(shape)
@@ -63,7 +64,7 @@ class FashionMnist(Singleton):
         if is_label:
             data = to_categorical(data, self.num_classes)
         else:
-            data = data.astype('float32')
+            data = data.astype(np.float32)
             data /= 255.0
             shape = (data.shape[0],) + self.image_shape
             data = data.reshape(shape)
@@ -106,7 +107,7 @@ class Mnist(Singleton):
         if is_label:
             data = to_categorical(data, self.num_classes)
         else:
-            data = data.astype('float32')
+            data = data.astype(np.float32)
             data /= 255.0
             shape = (data.shape[0],) + self.image_shape
             data = data.reshape(shape)

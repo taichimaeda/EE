@@ -9,7 +9,6 @@ model_name: name of the model
 trial_num: current number of repeated trials
 """
 import sys
-import json
 from experiment import Experiment
 from datasets import Datasets
 from models import Models
@@ -29,9 +28,7 @@ if __name__ == '__main__':
         if False in (Datasets.exists(dataset_name), Models.exists(model_name), Optimizers.exists(optimizer_name)) or trial_num >= 3:
             raise Exception('invalid values of required variables')
 
-    # get optimized hyperparameters
-    with open(f'../../bayesopt/networks/data/{dataset_name}_{model_name}_{optimizer_name}/result.json') as f:
-        params = json.load(f)['bayesopt.max']['params']
+
 
     # create and begin experiment
     experiment = Experiment(dataset_name, optimizer_name, model_name, trial_num, params=params)

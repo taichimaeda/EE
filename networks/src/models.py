@@ -10,7 +10,7 @@ from enum import Enum
 import functools
 
 
-def LeNet(dataset):
+def get_lenet(dataset):
     """
     function which returns lenet based model
 
@@ -41,7 +41,7 @@ def LeNet(dataset):
     return model
 
 
-def LSTM(dataset):
+def get_lstm(dataset):
     """
     function which returns lstm based model
 
@@ -70,8 +70,8 @@ class Models(Enum):
     functions as enum values are considered to be method definitions
     so use `partial()` to avoid it
     """
-    LENET = functools.partial(LeNet)
-    LSTM = functools.partial(LSTM)
+    LENET = functools.partial(get_lenet)
+    LSTM = functools.partial(get_lstm)
 
     @classmethod
     def exists(cls, name):

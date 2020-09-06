@@ -1,0 +1,44 @@
+{
+	"hyperdash": {
+		"api_key": "fbmMtp262y3NZ/EXm8gEcBvBxvt2r5q0h9rOhMnl3mo="
+	},
+	"constants": {
+		"mnist": {
+			"lenet": {
+				"loss": "categorical_crossentropy",
+				"batch_size": 256,
+				"epochs": 100,
+				"num_classes": 10,
+				"image_shape": [28, 28, 1]
+			}
+		},
+		"fashion_mnist": {
+			"lenet": {
+				"loss": "categorical_crossentropy",
+				"batch_size": 256,
+				"epochs": 100,
+				"num_classes": 10,
+				"image_shape": [28, 28, 1]
+			}
+		},
+		"cifar10": {
+			"lenet": {
+				"loss": "categorical_crossentropy",
+				"batch_size": 256,
+				"epochs": 100,
+				"num_classes": 10,
+				"image_shape": [32, 32, 3]
+			}
+		},
+		"imdb": {
+			"lstm": {
+				"loss": "binary_crossentropy",
+				"batch_size": 64,
+				"epohcs": 100,
+				"num_words": 5000,
+				"max_review_len": 500,
+				"embedding_vec_len": 32
+			}
+		}
+	}
+}

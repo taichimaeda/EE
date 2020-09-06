@@ -1,6 +1,7 @@
 import os
 import shutil
 import csv
+import json
 import numpy as np
 from decimal import Decimal
 from datetime import datetime
@@ -10,13 +11,18 @@ from optimizers import Optimizers
 
 class Experiment:
     """ class for handling experiment """
-    def __init__(self, benchmark_name, optimizer_name, params):
+    def __init__(self, benchmark_name, optimizer_name):
         """
         :param benchmark_name: name of the benchmark
         :type benchmark_name: str
         :param optimizer_name: name of the optimizer
         :type optimizer_name: str
         """
+        # get optimized hyperparameters
+        with open(f'../../hyperopt/benchmarks/data/{benchmark_name}_{optimizer_name}/result.json') as f:
+            params = json.load(f)
+
+        # get instances
         self.benchmark = Benchmarks.get(benchmark_name)
         self.optimizer = Optimizers.get(optimizer_name, benchmark=self.benchmark, params=params)
 
@@ -26,18 +32,18 @@ class Experiment:
             shutil.rmtree(d)
         os.makedirs(d)
 
-    def begin(self):
-        """ begin experiment """
         # ignore overflow and nan warnings
         np.seterr(all='ignore')
-        
-        # set starting coordinates
-        # seed is set to 0
+
+    def begin(self):
+        # initialize coordinates
+        # random seed is set to 0
         np.random.seed(0)
         coords = np.array([np.random.rand(100).astype(np.float128) * 10 - 5 for _ in range(2)])
         optimum_dec = np.array([Decimal(str(t)) for t in self.benchmark.optimum])
         optimum_dec = optimum_dec.reshape(2, 1)
 
+        # update coordinates
         dists_history = []
         time_history = []
         start = datetime.now()

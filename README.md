@@ -18,9 +18,9 @@
 
   
 
-## Bayesian optimization
+## Hyperparameter optimization
 
-- go to `/bayesopt/`
+- go to `/hyperopt/`
 
 ## Benchmark experiments
 
