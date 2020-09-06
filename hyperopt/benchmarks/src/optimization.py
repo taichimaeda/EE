@@ -45,7 +45,7 @@ class Optimization:
             fn=self.objective,
             space=self.space,
             algo=tpe.suggest,
-            max_evals=100,
+            max_evals=200,
             trials=trials,
             verbose=True
         )
@@ -55,6 +55,8 @@ class Optimization:
             json.dump(trials.trials, f, indent=4, default=str)
 
         # save result
+        # subtract from 1 for decay rates
+        result = {k: 1 - v if k in ('rho', 'initial_accumulator_value', 'beta_1', 'beta_2', 'momentum') else v for k, v in result.items()}
         with open(f'{self.main_dir}/result.json', 'w') as f:
             json.dump(result, f, indent=4)
 
@@ -89,5 +91,5 @@ class Optimization:
 
         # return min distance from the optimum solution
         ret = np.average(dists_history, axis=1)
-        ret = [Decimal('1e10') if t.is_nan() else t for t in ret]
+        ret = [Decimal('inf') if t.is_nan() else t for t in ret]
         return float(min(ret).log10())

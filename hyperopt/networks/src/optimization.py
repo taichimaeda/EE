@@ -70,6 +70,8 @@ class Optimization:
             json.dump(trials.trials, f, indent=4, default=str)
 
         # save result
+        # subtract from 1 for decay rates
+        result = {k: 1 - v if k in ('rho', 'initial_accumulator_value', 'beta_1', 'beta_2', 'momentum') else v for k, v in result.items()}
         with open(f'{self.main_dir}/result.json', 'w') as f:
             json.dump(result, f, indent=4)
 

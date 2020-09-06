@@ -6,17 +6,6 @@
   
 - Some reference materials are stored in `/references/`
 
-- For monitoring the experiments, a library called Hyperdash was used. In order to use the codes, the API key must be provided in `config.json` as the following:
-
-  ```json
-  {
-    "hyperdash": {
-      "api_key": "YOUR API KEY"
-    }
-  }
-  ```
-
-  
 
 ## Hyperparameter optimization
 
