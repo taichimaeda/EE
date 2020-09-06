@@ -16,15 +16,14 @@ from hyperdash import Experiment as HyperdashExperiment
 
 
 class Optimization:
-    """ class for handling bayesian optimization """
     def __init__(self, dataset_name, model_name, optimizer_name):
         """
         :param dataset_name: name of the dataset
         :type dataset_name: str
-        :param optimizer_name: name of the optimizer
-        :type optimizer_name: str
         :param model_name: name of the model
         :type model_name: str
+        :param optimizer_name: name of the optimizer
+        :type optimizer_name: str
         """
         # store names
         self.dataset_name = dataset_name

@@ -3,10 +3,8 @@ entry point module for single trial experiments
 
 this accepts the following system arguments:
 
-dataset_name: name of the dataset
+benchmark_name: name of the benchmark
 optimizer_name: name of the optimizer
-model_name: name of the model
-resume: whether to resume from the previous experiment ('true' or 'false' as string)
 """
 import sys
 from loader import Benchmarks

@@ -10,7 +10,6 @@ from optimizers import Optimizers
 
 
 class Experiment:
-    """ class for handling experiment """
     def __init__(self, benchmark_name, optimizer_name):
         """
         :param benchmark_name: name of the benchmark

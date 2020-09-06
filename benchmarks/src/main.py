@@ -1,8 +1,7 @@
 """
 entry point module for multiple trial experiments
 
-this does not accept any system arguments as the experiment process
-completes relatively quickly
+this can be execute locally as the process is relatively quick
 """
 from experiment import Experiment
 from benchmarks import Benchmarks

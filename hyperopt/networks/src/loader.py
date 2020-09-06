@@ -1,5 +1,5 @@
 """
-module for importing all the modules and pacakges from parant directories
+module for importing the modules and pacakges from parant directories
 
 note modules and pacakges in the current directory are no longer available
 if their names are identical to those imported here

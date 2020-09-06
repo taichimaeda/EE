@@ -4,7 +4,6 @@ import json
 from datasets import Datasets
 from models import Models
 from optimizers import Optimizers
-import tensorflow as tf
 from tensorflow.keras.callbacks import TensorBoard
 from tensorflow.keras.callbacks import CSVLogger
 from callbacks.hyperdash import Hyperdash
@@ -18,16 +17,15 @@ logger = Logger()
 
 
 class Experiment:
-    """ class for handling experiment """
     @logger.read
     def __init__(self, dataset_name, model_name, optimizer_name, trial_num):
         """
         :param dataset_name: name of the dataset
         :type dataset_name: str
-        :param optimizer_name: name of the optimizer
-        :type optimizer_name: str
         :param model_name: name of the model
         :type model_name: str
+        :param optimizer_name: name of the optimizer
+        :type optimizer_name: str
         :param trial_num: current number of repeated trials
         :type trial_num: int
         """

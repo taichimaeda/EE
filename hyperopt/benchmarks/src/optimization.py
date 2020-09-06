@@ -12,7 +12,6 @@ from loader import Optimizers
 
 
 class Optimization:
-    """ class for handling bayesian optimization """
     def __init__(self, benchmark_name, optimizer_name):
         """
         :param benchmark_name: name of the benchmark

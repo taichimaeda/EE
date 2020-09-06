@@ -9,9 +9,7 @@ from enum import Enum
 
 
 class Singleton:
-    """
-    avoid loading datasets multiple times
-    """
+    """ avoid loading datasets multiple times """
     def __new__(cls, *args):
         if not hasattr(cls, '_instance'):
             cls._instance = super().__new__(cls, *args)
@@ -29,11 +27,10 @@ class Cifar10(Singleton):
         (x_train, y_train), (x_test, y_test) = self.data
         x_train, x_test = [self.preprocess(d) for d in (x_train, x_test)]
         y_train, y_test = [self.preprocess(d, is_label=True) for d in (y_train, y_test)]
-
         return (x_train, y_train), (x_test, y_test)
 
     def preprocess(self, data, is_label=False):
-        """ this normalises data and converts labels into one hot encoding """
+        """ normalise data and convert labels into one hot encoding """
         if is_label:
             data = to_categorical(data, self.num_classes)
         else:
@@ -41,7 +38,6 @@ class Cifar10(Singleton):
             data /= 255.0
             shape = (data.shape[0],) + self.image_shape
             data = data.reshape(shape)
-
         return data
 
 
@@ -56,11 +52,10 @@ class FashionMnist(Singleton):
         (x_train, y_train), (x_test, y_test) = self.data
         x_train, x_test = [self.preprocess(d) for d in (x_train, x_test)]
         y_train, y_test = [self.preprocess(d, is_label=True) for d in (y_train, y_test)]
-
         return (x_train, y_train), (x_test, y_test)
 
     def preprocess(self, data, is_label=False):
-        """ this normalises data and converts labels into one hot encoding """
+        """ normalise data and convert labels into one hot encoding """
         if is_label:
             data = to_categorical(data, self.num_classes)
         else:
@@ -68,7 +63,6 @@ class FashionMnist(Singleton):
             data /= 255.0
             shape = (data.shape[0],) + self.image_shape
             data = data.reshape(shape)
-
         return data
 
 
@@ -84,7 +78,6 @@ class IMDB(Singleton):
         (x_train, y_train), (x_test, y_test) = self.data
         x_train = pad_sequences(x_train, self.max_review_len)
         x_test = pad_sequences(x_test, self.max_review_len)
-
         return (x_train, y_train), (x_test, y_test)
 
 
@@ -99,11 +92,10 @@ class Mnist(Singleton):
         (x_train, y_train), (x_test, y_test) = self.data
         x_train, x_test = [self.preprocess(d) for d in (x_train, x_test)]
         y_train, y_test = [self.preprocess(d, is_label=True) for d in (y_train, y_test)]
-
         return (x_train, y_train), (x_test, y_test)
 
     def preprocess(self, data, is_label=False):
-        """ this normalises data and converts labels into one hot encoding """
+        """ normalise data and convert labels into one hot encoding """
         if is_label:
             data = to_categorical(data, self.num_classes)
         else:
@@ -111,7 +103,6 @@ class Mnist(Singleton):
             data /= 255.0
             shape = (data.shape[0],) + self.image_shape
             data = data.reshape(shape)
-
         return data
 
 
