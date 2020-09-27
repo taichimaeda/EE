@@ -1,0 +1,411 @@
+sys.version
+3.6.9 (default, Jul 17 2020, 12:50:27) 
+[GCC 8.4.0]
+
+tf.__version__
+2.3.0
+
+keras.__version__
+2.4.0
+
+Ubuntu 18.04.5 LTS \n \l
+
+H/W path    Device  Class      Description
+==========================================
+                    system     Computer
+/0                  bus        Motherboard
+/0/0                memory     25GiB System memory
+/0/1                processor  Intel(R) Xeon(R) CPU @ 2.00GHz
+/0/100              bridge     440FX - 82441FX PMC [Natoma]
+/0/100/1            bridge     82371AB/EB/MB PIIX4 ISA
+/0/100/1.3          bridge     82371AB/EB/MB PIIX4 ACPI
+/0/100/3            generic    Virtio SCSI
+/0/100/3/0          generic    Virtual I/O device
+/0/100/4            display    GV100GL [Tesla V100 SXM2 16GB]
+/0/100/5            network    Virtio network device
+/0/100/5/0          network    Virtual I/O device
+/0/100/6            generic    Virtio RNG
+/0/100/6/0          generic    Virtual I/O device
+/1          eth0    network    Ethernet interface
+ 
+Sun Sep 27 06:50:02 2020       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.66       Driver Version: 418.67       CUDA Version: 10.1     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  Off  | 00000000:00:04.0 Off |                    0 |
+| N/A   34C    P0    25W / 300W |      0MiB / 16130MiB |      0%      Default |
+|                               |                      |                 ERR! |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+
+imdb lstm adadelta 1
+started at 2020/09/27 08:50:18:344095
+finished at 2020/09/27 08:59:00:735204
+
+imdb lstm adadelta 2
+started at 2020/09/27 08:59:06:603772
+finished at 2020/09/27 09:07:41:532057
+
+imdb lstm adadelta 3
+started at 2020/09/27 09:07:47:795291
+finished at 2020/09/27 09:16:21:108020
+
+imdb lstm adadelta 4
+started at 2020/09/27 09:16:27:490250
+finished at 2020/09/27 09:25:00:079992
+
+imdb lstm adadelta 5
+started at 2020/09/27 09:25:06:135661
+finished at 2020/09/27 09:33:47:640247
+
+imdb lstm adadelta 6
+started at 2020/09/27 09:33:54:104407
+finished at 2020/09/27 09:42:33:662124
+
+imdb lstm adadelta 7
+started at 2020/09/27 09:42:39:965648
+finished at 2020/09/27 09:51:19:557074
+
+imdb lstm adadelta 8
+started at 2020/09/27 09:51:25:786080
+finished at 2020/09/27 10:00:00:326937
+
+imdb lstm adadelta 9
+started at 2020/09/27 10:00:06:511617
+finished at 2020/09/27 10:08:41:362100
+
+imdb lstm adadelta 10
+started at 2020/09/27 10:08:47:681691
+finished at 2020/09/27 10:17:19:329229
+
+imdb lstm adagrad 1
+started at 2020/09/27 10:17:26:415040
+finished at 2020/09/27 10:25:42:160070
+
+imdb lstm adagrad 2
+started at 2020/09/27 10:25:48:509012
+finished at 2020/09/27 10:34:10:029201
+
+imdb lstm adagrad 3
+started at 2020/09/27 10:34:16:355631
+finished at 2020/09/27 10:42:38:123524
+
+imdb lstm adagrad 4
+started at 2020/09/27 10:42:44:623761
+finished at 2020/09/27 10:50:58:099640
+
+imdb lstm adagrad 5
+started at 2020/09/27 10:51:04:185930
+finished at 2020/09/27 10:58:56:585848
+
+imdb lstm adagrad 6
+started at 2020/09/27 10:59:02:832828
+finished at 2020/09/27 11:06:56:925714
+
+imdb lstm adagrad 7
+started at 2020/09/27 11:07:02:905271
+finished at 2020/09/27 11:14:50:973930
+
+imdb lstm adagrad 8
+started at 2020/09/27 11:14:57:059061
+finished at 2020/09/27 11:22:41:807879
+
+imdb lstm adagrad 9
+started at 2020/09/27 11:22:47:724852
+finished at 2020/09/27 11:30:33:248795
+
+imdb lstm adagrad 10
+started at 2020/09/27 11:30:39:465428
+finished at 2020/09/27 11:38:42:326774
+
+imdb lstm adam 1
+started at 2020/09/27 11:38:49:471098
+finished at 2020/09/27 11:47:22:509253
+
+imdb lstm adam 2
+started at 2020/09/27 11:47:29:027585
+finished at 2020/09/27 11:56:03:005659
+
+imdb lstm adam 3
+started at 2020/09/27 11:56:09:426652
+finished at 2020/09/27 12:04:45:860550
+
+imdb lstm adam 4
+started at 2020/09/27 12:04:52:552390
+finished at 2020/09/27 12:13:26:180235
+
+imdb lstm adam 5
+started at 2020/09/27 12:13:32:586735
+finished at 2020/09/27 12:21:50:286529
+
+imdb lstm adam 6
+started at 2020/09/27 12:21:56:703261
+finished at 2020/09/27 12:30:16:299788
+
+imdb lstm adam 7
+started at 2020/09/27 12:30:22:445219
+finished at 2020/09/27 12:38:42:880300
+
+imdb lstm adam 8
+started at 2020/09/27 12:38:49:205014
+finished at 2020/09/27 12:46:56:954878
+
+imdb lstm adam 9
+started at 2020/09/27 12:47:03:204860
+finished at 2020/09/27 12:55:06:503162
+
+imdb lstm adam 10
+started at 2020/09/27 12:55:12:695230
+finished at 2020/09/27 13:03:13:407283
+
+imdb lstm adamax 1
+started at 2020/09/27 13:03:20:410413
+finished at 2020/09/27 13:11:13:934770
+
+imdb lstm adamax 2
+started at 2020/09/27 13:11:20:069489
+finished at 2020/09/27 13:19:13:059949
+
+imdb lstm adamax 3
+started at 2020/09/27 13:19:18:941927
+finished at 2020/09/27 13:27:12:366847
+
+imdb lstm adamax 4
+started at 2020/09/27 13:27:17:930425
+finished at 2020/09/27 13:35:24:337990
+
+imdb lstm adamax 5
+started at 2020/09/27 13:35:30:371284
+finished at 2020/09/27 13:43:44:971624
+
+imdb lstm adamax 6
+started at 2020/09/27 13:43:51:501376
+finished at 2020/09/27 13:51:57:964852
+
+imdb lstm adamax 7
+started at 2020/09/27 13:52:04:243241
+finished at 2020/09/27 14:00:12:194812
+
+imdb lstm adamax 8
+started at 2020/09/27 14:00:18:724597
+finished at 2020/09/27 14:08:31:498969
+
+imdb lstm adamax 9
+started at 2020/09/27 14:08:37:835868
+finished at 2020/09/27 14:16:49:561856
+
+imdb lstm adamax 10
+started at 2020/09/27 14:16:56:031788
+finished at 2020/09/27 14:25:00:916799
+
+imdb lstm momentum 1
+started at 2020/09/27 14:25:08:091351
+finished at 2020/09/27 14:32:57:123764
+
+imdb lstm momentum 2
+started at 2020/09/27 14:33:03:469505
+finished at 2020/09/27 14:40:52:605882
+
+imdb lstm momentum 3
+started at 2020/09/27 14:40:58:525881
+finished at 2020/09/27 14:48:53:929541
+
+imdb lstm momentum 4
+started at 2020/09/27 14:49:00:598656
+finished at 2020/09/27 14:57:11:793469
+
+imdb lstm momentum 5
+started at 2020/09/27 14:57:17:502397
+finished at 2020/09/27 15:05:25:224734
+
+imdb lstm momentum 6
+started at 2020/09/27 15:05:30:889333
+finished at 2020/09/27 15:13:30:588695
+
+imdb lstm momentum 7
+started at 2020/09/27 15:13:36:025188
+finished at 2020/09/27 15:21:35:655880
+
+imdb lstm momentum 8
+started at 2020/09/27 15:21:41:176202
+finished at 2020/09/27 15:29:31:024421
+
+imdb lstm momentum 9
+started at 2020/09/27 15:29:36:473896
+finished at 2020/09/27 15:37:37:189309
+
+imdb lstm momentum 10
+started at 2020/09/27 15:37:42:764553
+finished at 2020/09/27 15:45:32:325443
+
+imdb lstm nadam 1
+started at 2020/09/27 15:45:38:328125
+finished at 2020/09/27 15:53:39:647064
+
+imdb lstm nadam 2
+started at 2020/09/27 15:53:45:025635
+finished at 2020/09/27 16:02:04:583643
+
+imdb lstm nadam 3
+started at 2020/09/27 16:02:10:733677
+finished at 2020/09/27 16:10:23:451160
+
+imdb lstm nadam 4
+started at 2020/09/27 16:10:29:888604
+finished at 2020/09/27 16:18:46:728658
+
+imdb lstm nadam 5
+started at 2020/09/27 16:18:53:011670
+finished at 2020/09/27 16:26:59:683828
+
+imdb lstm nadam 6
+started at 2020/09/27 16:27:06:019450
+finished at 2020/09/27 16:35:12:928256
+
+imdb lstm nadam 7
+started at 2020/09/27 16:35:18:951340
+finished at 2020/09/27 16:43:35:109231
+
+imdb lstm nadam 8
+started at 2020/09/27 16:43:40:765532
+finished at 2020/09/27 16:52:01:735635
+
+imdb lstm nadam 9
+started at 2020/09/27 16:52:07:144386
+finished at 2020/09/27 17:00:34:382248
+
+imdb lstm nadam 10
+started at 2020/09/27 17:00:39:951272
+finished at 2020/09/27 17:08:51:938507
+
+imdb lstm nesterov 1
+started at 2020/09/27 17:08:59:039463
+finished at 2020/09/27 17:16:55:443303
+
+imdb lstm nesterov 2
+started at 2020/09/27 17:17:01:731847
+finished at 2020/09/27 17:24:54:211278
+
+imdb lstm nesterov 3
+started at 2020/09/27 17:24:59:793943
+finished at 2020/09/27 17:32:52:250008
+
+imdb lstm nesterov 4
+started at 2020/09/27 17:32:57:847067
+finished at 2020/09/27 17:40:50:140318
+
+imdb lstm nesterov 5
+started at 2020/09/27 17:40:56:420444
+finished at 2020/09/27 17:48:50:903826
+
+imdb lstm nesterov 6
+started at 2020/09/27 17:48:57:312821
+finished at 2020/09/27 17:56:55:606970
+
+imdb lstm nesterov 7
+started at 2020/09/27 17:57:01:957281
+finished at 2020/09/27 18:05:02:473463
+
+imdb lstm nesterov 8
+started at 2020/09/27 18:05:08:154972
+finished at 2020/09/27 18:13:00:353486
+
+imdb lstm nesterov 9
+started at 2020/09/27 18:13:07:142657
+finished at 2020/09/27 18:21:08:758233
+
+imdb lstm nesterov 10
+started at 2020/09/27 18:21:15:419637
+finished at 2020/09/27 18:29:10:525788
+
+imdb lstm rmsprop 1
+started at 2020/09/27 18:29:17:160171
+finished at 2020/09/27 18:37:21:199847
+
+imdb lstm rmsprop 2
+started at 2020/09/27 18:37:26:653153
+finished at 2020/09/27 18:45:23:320251
+
+imdb lstm rmsprop 3
+started at 2020/09/27 18:45:29:514325
+finished at 2020/09/27 18:53:24:924258
+
+imdb lstm rmsprop 4
+started at 2020/09/27 18:53:30:462749
+finished at 2020/09/27 19:01:34:988447
+
+imdb lstm rmsprop 5
+started at 2020/09/27 19:01:40:494387
+finished at 2020/09/27 19:09:45:987175
+
+imdb lstm rmsprop 6
+started at 2020/09/27 19:09:52:445402
+finished at 2020/09/27 19:18:06:505587
+
+imdb lstm rmsprop 7
+started at 2020/09/27 19:18:13:020538
+finished at 2020/09/27 19:26:32:033507
+
+imdb lstm rmsprop 8
+started at 2020/09/27 19:26:37:832963
+finished at 2020/09/27 19:34:54:764978
+
+imdb lstm rmsprop 9
+started at 2020/09/27 19:35:01:370019
+finished at 2020/09/27 19:43:16:835330
+
+imdb lstm rmsprop 10
+started at 2020/09/27 19:43:23:596152
+finished at 2020/09/27 19:51:47:091884
+
+imdb lstm sgd 1
+started at 2020/09/27 19:51:53:563987
+finished at 2020/09/27 20:00:45:103293
+
+imdb lstm sgd 2
+started at 2020/09/27 20:00:52:117814
+finished at 2020/09/27 20:09:50:698978
+
+imdb lstm sgd 3
+started at 2020/09/27 20:09:57:440925
+finished at 2020/09/27 20:18:55:237506
+
+imdb lstm sgd 4
+started at 2020/09/27 20:19:01:156061
+finished at 2020/09/27 20:27:56:755198
+
+imdb lstm sgd 5
+started at 2020/09/27 20:28:03:949935
+finished at 2020/09/27 20:37:04:167943
+
+imdb lstm sgd 6
+started at 2020/09/27 20:37:10:080314
+finished at 2020/09/27 20:46:07:515520
+
+imdb lstm sgd 7
+started at 2020/09/27 20:46:13:220402
+finished at 2020/09/27 20:55:18:975688
+
+imdb lstm sgd 8
+started at 2020/09/27 20:55:26:114757
+finished at 2020/09/27 21:04:24:829668
+
+imdb lstm sgd 9
+started at 2020/09/27 21:04:30:634421
+finished at 2020/09/27 21:13:22:650012
+
+imdb lstm sgd 10
+started at 2020/09/27 21:13:29:806582
+finished at 2020/09/27 21:22:21:501704

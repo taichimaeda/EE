@@ -3,13 +3,18 @@ import shutil
 import csv
 import json
 import numpy as np
-from decimal import Decimal
 from datetime import datetime
 from benchmarks import Benchmarks
 from optimizers import Optimizers
+from logger import Logger
+
+
+# create logger
+logger = Logger()
 
 
 class Experiment:
+    @logger.read
     def __init__(self, benchmark_name, optimizer_name):
         """
         :param benchmark_name: name of the benchmark
@@ -31,16 +36,13 @@ class Experiment:
             shutil.rmtree(d)
         os.makedirs(d)
 
-        # ignore overflow and nan warnings
-        np.seterr(all='ignore')
-
+    @logger.write
     def begin(self):
         # initialize coordinates
         # random seed is set to 0
         np.random.seed(0)
-        coords = np.array([np.random.rand(100).astype(np.float128) * 10 - 5 for _ in range(2)])
-        optimum_dec = np.array([Decimal(str(t)) for t in self.benchmark.optimum])
-        optimum_dec = optimum_dec.reshape(2, 1)
+        coords = np.array([np.random.rand(100).astype(np.float) * 10 - 5 for _ in range(2)])
+        optimum = np.array(self.benchmark.optimum).reshape(2, 1)
 
         # update coordinates
         dists_history = []
@@ -49,8 +51,7 @@ class Experiment:
         for i in range(10000):
             coords = self.optimizer.update(coords)
             if i % 100 == 0:
-                coords_dec = np.array([[Decimal(str(t)) for t in coords[i]] for i in range(2)])
-                dists = (np.sum(coords_dec - optimum_dec, axis=0) ** Decimal('2.0')) ** Decimal('0.5')
+                dists = (np.sum(coords - optimum, axis=0) ** 2.0) ** 0.5
                 dists_history.append(dists)
                 time_history.append((datetime.now() - start).total_seconds() / 100)
                 start = datetime.now()
@@ -58,10 +59,10 @@ class Experiment:
         # save dists history
         with open(f'{self.main_dir}/result.csv', 'w') as f:
             writer = csv.writer(f)
-            header = ['step', *[f'#{i + 1}' for i in range(len(dists_history[0]))]]
+            header = ['step', 'average distance']
             writer.writerow(header)
             for i in range(len(dists_history)):
-                row = [(i + 1) * 100, *dists_history[i]]
+                row = [(i + 1) * 100, np.mean(dists_history[i])]
                 writer.writerow(row)
 
         # save time history

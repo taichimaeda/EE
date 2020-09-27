@@ -1,5 +1,5 @@
-from enum import Enum
 import numpy as np
+from enum import Enum
 
 
 class Ackley:
@@ -23,19 +23,8 @@ class Bukin:
     def grads(self, coords):
         x, y = coords
         dx = (0.01 * (x + 10.0)) / (np.abs(x + 10.0) + 1e-7) - (0.5 * (y - 0.01 * x)) / (
-                    (np.abs(y - 0.01 * x) ** (3.0 / 2.0)) + 1e-7)
+                (np.abs(y - 0.01 * x) ** (3.0 / 2.0)) + 1e-7)
         dy = (50.0 * (y - 0.01 * x)) / (np.abs(y - 0.01 * x) ** (3.0 / 2.0) + 1e-7)
-        grads = np.array([dx, dy])
-        return grads
-
-
-class Eclipse:
-    def __init__(self):
-        self.optimum = (0.0, 0.0)
-
-    def grads(self, coords):
-        x, y = coords
-        dx, dy = 0.2 * x, 2.0 * y
         grads = np.array([dx, dy])
         return grads
 
@@ -49,7 +38,7 @@ class Levi:
         dx = 2.0 * (x - 1.0) * (np.sin(3.0 * np.pi * y) ** 2.0 + 1.0) + 6.0 * np.pi * np.sin(3.0 * np.pi * x) * np.cos(
             3.0 * np.pi * x)
         dy = 6.0 * np.pi * (x - 1.0) ** 2 * np.sin(3.0 * np.pi * y) * np.cos(3.0 * np.pi * y) + 2.0 * (y - 1.0) * (
-                    np.sin(2.0 * np.pi * y) ** 2.0 + 1.0) \
+                np.sin(2.0 * np.pi * y) ** 2.0 + 1.0) \
              + 4.0 * np.pi * (y - 1.0) ** 2.0 * np.sin(2.0 * np.pi * y) * np.cos(2.0 * np.pi * y)
         grads = np.array([dx, dy])
         return grads
@@ -81,7 +70,6 @@ class Rosenbrock:
 
 class Benchmarks(Enum):
     """ enum class handling all the benchmark classes """
-    ECLIPSE = Eclipse
     ACKLEY = Ackley
     ROSENBROCK = Rosenbrock
     RASTRIGIN = Rastrigin
@@ -109,15 +97,3 @@ class Benchmarks(Enum):
         :return: instance of the benchmark class
         """
         return cls[name.upper()].value()
-
-    @classmethod
-    def list_all(cls):
-        """
-        get name list of all the benchmark classes
-
-        :return: name list of all the benchmark classes
-        :rtype: list[str]
-        """
-        return [member.lower() for member in sorted(list(cls.__members__.keys()))]
-
-

@@ -103,8 +103,6 @@ class Nadam:
         self.v = 0.0
 
     def update(self, coords):
-        # TODO: find out more
-        #  https://medium.com/konvergen/modifying-adam-to-use-nesterov-accelerated-gradients-nesterov-accelerated-adaptive-moment-67154177e1fd
         grads = self.benchmark.grads(coords)
         self.t += 1.0
         self.m = self.beta_1 * self.m + (1.0 - self.beta_1) * grads
@@ -192,13 +190,3 @@ class Optimizers(Enum):
         :return: instance of the optimizer class
         """
         return cls[name.upper()].value(benchmark, **params)
-
-    @classmethod
-    def list_all(cls):
-        """
-        get name list of all the optimizer classes
-
-        :return: name list of all the optimizer classes
-        :rtype: list[str]
-        """
-        return [member.lower() for member in sorted(list(cls.__members__.keys()))]

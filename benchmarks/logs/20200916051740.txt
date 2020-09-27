@@ -1,0 +1,205 @@
+sys.version
+3.6.9 (default, Jul 17 2020, 12:50:27) 
+[GCC 8.4.0]
+
+Ubuntu 18.04.5 LTS \n \l
+
+H/W path    Device  Class      Description
+==========================================
+                    system     Computer
+/0                  bus        Motherboard
+/0/0                memory     25GiB System memory
+/0/1                processor  Intel(R) Xeon(R) CPU @ 2.00GHz
+/0/100              bridge     440FX - 82441FX PMC [Natoma]
+/0/100/1            bridge     82371AB/EB/MB PIIX4 ISA
+/0/100/1.3          bridge     82371AB/EB/MB PIIX4 ACPI
+/0/100/3            generic    Virtio SCSI
+/0/100/3/0          generic    Virtual I/O device
+/0/100/4            network    Virtio network device
+/0/100/4/0          network    Virtual I/O device
+/0/100/5            generic    Virtio memory balloon
+/0/100/5/0          generic    Virtual I/O device
+/0/100/6            generic    Virtio RNG
+/0/100/6/0          generic    Virtual I/O device
+/1          eth0    network    Ethernet interface
+
+
+ackley adadelta
+started at 2020/09/15 22:17:43:165035
+finished at 2020/09/15 22:17:44:211352
+
+ackley adagrad
+started at 2020/09/15 22:17:45:234348
+finished at 2020/09/15 22:17:46:132577
+
+ackley adam
+started at 2020/09/15 22:17:46:892151
+finished at 2020/09/15 22:17:47:726371
+
+ackley adamax
+started at 2020/09/15 22:17:48:283271
+finished at 2020/09/15 22:17:49:171644
+
+ackley momentum
+started at 2020/09/15 22:17:49:948556
+finished at 2020/09/15 22:17:50:841483
+
+ackley nadam
+started at 2020/09/15 22:17:51:605959
+finished at 2020/09/15 22:17:52:548098
+
+ackley nesterov
+started at 2020/09/15 22:17:53:302549
+finished at 2020/09/15 22:17:54:312987
+
+ackley rmsprop
+started at 2020/09/15 22:17:55:064348
+finished at 2020/09/15 22:17:56:114026
+
+ackley sgd
+started at 2020/09/15 22:17:56:877760
+finished at 2020/09/15 22:17:57:527223
+
+bukin adadelta
+started at 2020/09/15 22:17:58:276108
+finished at 2020/09/15 22:17:58:961166
+
+bukin adagrad
+started at 2020/09/15 22:17:59:774425
+finished at 2020/09/15 22:18:00:531508
+
+bukin adam
+started at 2020/09/15 22:18:01:294816
+finished at 2020/09/15 22:18:01:880653
+
+bukin adamax
+started at 2020/09/15 22:18:02:664651
+finished at 2020/09/15 22:18:03:370832
+
+bukin momentum
+started at 2020/09/15 22:18:04:134176
+finished at 2020/09/15 22:18:04:648300
+
+bukin nadam
+started at 2020/09/15 22:18:05:410433
+finished at 2020/09/15 22:18:06:295014
+
+bukin nesterov
+started at 2020/09/15 22:18:07:151836
+finished at 2020/09/15 22:18:07:713552
+
+bukin rmsprop
+started at 2020/09/15 22:18:08:486400
+finished at 2020/09/15 22:18:09:076464
+
+bukin sgd
+started at 2020/09/15 22:18:09:825805
+finished at 2020/09/15 22:18:10:281029
+
+levi adadelta
+started at 2020/09/15 22:18:11:030793
+finished at 2020/09/15 22:18:12:048659
+
+levi adagrad
+started at 2020/09/15 22:18:12:917775
+finished at 2020/09/15 22:18:13:872901
+
+levi adam
+started at 2020/09/15 22:18:14:451291
+finished at 2020/09/15 22:18:15:343595
+
+levi adamax
+started at 2020/09/15 22:18:15:954021
+finished at 2020/09/15 22:18:17:104134
+
+levi momentum
+started at 2020/09/15 22:18:17:870958
+finished at 2020/09/15 22:18:18:539095
+
+levi nadam
+started at 2020/09/15 22:18:19:088557
+finished at 2020/09/15 22:18:20:109031
+
+levi nesterov
+started at 2020/09/15 22:18:20:607346
+finished at 2020/09/15 22:18:21:346062
+
+levi rmsprop
+started at 2020/09/15 22:18:21:847001
+finished at 2020/09/15 22:18:22:649213
+
+levi sgd
+started at 2020/09/15 22:18:23:400403
+finished at 2020/09/15 22:18:24:120348
+
+rastrigin adadelta
+started at 2020/09/15 22:18:24:890097
+finished at 2020/09/15 22:18:25:348530
+
+rastrigin adagrad
+started at 2020/09/15 22:18:25:867784
+finished at 2020/09/15 22:18:26:128783
+
+rastrigin adam
+started at 2020/09/15 22:18:26:642552
+finished at 2020/09/15 22:18:27:013735
+
+rastrigin adamax
+started at 2020/09/15 22:18:27:533330
+finished at 2020/09/15 22:18:27:912818
+
+rastrigin momentum
+started at 2020/09/15 22:18:28:440422
+finished at 2020/09/15 22:18:28:702003
+
+rastrigin nadam
+started at 2020/09/15 22:18:29:261197
+finished at 2020/09/15 22:18:29:657791
+
+rastrigin nesterov
+started at 2020/09/15 22:18:30:203148
+finished at 2020/09/15 22:18:30:494286
+
+rastrigin rmsprop
+started at 2020/09/15 22:18:31:040237
+finished at 2020/09/15 22:18:31:355006
+
+rastrigin sgd
+started at 2020/09/15 22:18:31:908354
+finished at 2020/09/15 22:18:32:133081
+
+rosenbrock adadelta
+started at 2020/09/15 22:18:32:635892
+finished at 2020/09/15 22:18:33:073873
+
+rosenbrock adagrad
+started at 2020/09/15 22:18:33:579542
+finished at 2020/09/15 22:18:33:938180
+
+rosenbrock adam
+started at 2020/09/15 22:18:34:502649
+finished at 2020/09/15 22:18:34:952482
+
+rosenbrock adamax
+started at 2020/09/15 22:18:35:529651
+finished at 2020/09/15 22:18:35:901759
+
+rosenbrock momentum
+started at 2020/09/15 22:18:36:472514
+finished at 2020/09/15 22:18:36:791911
+
+rosenbrock nadam
+started at 2020/09/15 22:18:37:313762
+finished at 2020/09/15 22:18:37:772060
+
+rosenbrock nesterov
+started at 2020/09/15 22:18:38:314743
+finished at 2020/09/15 22:18:38:627441
+
+rosenbrock rmsprop
+started at 2020/09/15 22:18:39:202962
+finished at 2020/09/15 22:18:39:590671
+
+rosenbrock sgd
+started at 2020/09/15 22:18:40:149702
+finished at 2020/09/15 22:18:40:415268

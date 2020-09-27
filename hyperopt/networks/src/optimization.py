@@ -1,3 +1,4 @@
+import sys
 import os
 import shutil
 import json
@@ -6,13 +7,15 @@ from hyperopt import fmin
 from hyperopt import tpe
 from hyperopt import Trials
 from space import space
-from loader import Datasets
-from loader import Models
-from loader import Optimizers
-from loader import Hyperdash
 from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.callbacks import TerminateOnNaN
 from hyperdash import Experiment as HyperdashExperiment
+
+sys.path.append('../../../networks/src')
+from datasets import Datasets
+from models import Models
+from optimizers import Optimizers
+from callbacks.hyperdash import Hyperdash
 
 
 class Optimization:
@@ -30,11 +33,7 @@ class Optimization:
         self.model_name = model_name
         self.optimizer_name = optimizer_name
 
-        # get instances
-        self.dataset = Datasets.get(self.dataset_name)
-        self.model = Models.get(self.model_name, dataset=self.dataset)
-
-        # get search space
+        # store search space
         self.space = space[optimizer_name]
 
         # get config
@@ -48,7 +47,7 @@ class Optimization:
         self.epochs = c['epochs']
 
         # configure and initialize directory
-        d = self.main_dir = f'../data/{dataset_name}_{model_name}_{optimizer_name}/'
+        d = self.main_dir = f'../data/{dataset_name}_{model_name}_{optimizer_name}'
         if os.path.exists(d):
             shutil.rmtree(d)
         os.makedirs(d)
@@ -60,7 +59,7 @@ class Optimization:
             fn=self.objective,
             space=self.space,
             algo=tpe.suggest,
-            max_evals=50,
+            max_evals=200,
             trials=trials,
             verbose=True
         )
@@ -71,7 +70,7 @@ class Optimization:
 
         # save result
         # subtract from 1 for decay rates
-        result = {k: 1 - v if k in ('rho', 'initial_accumulator_value', 'beta_1', 'beta_2', 'momentum') else v for k, v in result.items()}
+        result = {k: 1 - v if k in ('rho', 'beta_1', 'beta_2', 'momentum') else v for k, v in result.items()}
         with open(f'{self.main_dir}/result.json', 'w') as f:
             json.dump(result, f, indent=4)
 
@@ -83,8 +82,9 @@ class Optimization:
         :return: maximum validation accuracy
         :rtype: float
         """
-        # get optimizer instance
-        # dataset and model instances are obtained in advance since they are independent from the given parameters
+        # get instances
+        dataset = Datasets.get(self.dataset_name)
+        model = Models.get(self.model_name, dataset=dataset)
         optimizer = Optimizers.get(self.optimizer_name, params=params)
 
         # configure hyperdash experiment
@@ -98,17 +98,17 @@ class Optimization:
 
         # set callbacks
         callbacks = [
-            Hyperdash(['val_loss', 'loss', 'val_accuracy', 'accuracy'], hd_exp),
-            EarlyStopping('val_accuracy', min_delta=0.01, patience=10, verbose=1),
+            Hyperdash(['accuracy', 'loss', 'val_accuracy', 'val_loss'], hd_exp),
+            EarlyStopping('val_accuracy', patience=10, min_delta=0.01, verbose=1),
             TerminateOnNaN()
         ]
 
         # get data
-        (x_train, y_train), *_ = self.dataset.get_batch()
+        (x_train, y_train), *_ = dataset.get_batch()
 
         # start learning
-        self.model.compile(loss=self.loss, optimizer=optimizer, metrics=['accuracy'])
-        history = self.model.fit(
+        model.compile(loss=self.loss, optimizer=optimizer, metrics=['accuracy'])
+        history = model.fit(
             x_train,
             y_train,
             batch_size=self.batch_size,
@@ -121,5 +121,6 @@ class Optimization:
         # stop hyperdash experiment
         hd_exp.end()
 
-        # return minimum validation loss
-        return min(np.array(history.history['val_loss']))
+        # return maximum validation accuracy
+        val_accuracy = np.array(history.history['val_accuracy'])
+        return max(val_accuracy) * (-1)

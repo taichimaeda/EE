@@ -1,0 +1,771 @@
+sys.version
+3.6.9 (default, Jul 17 2020, 12:50:27) 
+[GCC 8.4.0]
+
+tf.__version__
+2.3.0
+
+keras.__version__
+2.4.0
+
+Ubuntu 18.04.5 LTS \n \l
+
+H/W path    Device  Class      Description
+==========================================
+                    system     Computer
+/0                  bus        Motherboard
+/0/0                memory     25GiB System memory
+/0/1                processor  Intel(R) Xeon(R) CPU @ 2.30GHz
+/0/100              bridge     440FX - 82441FX PMC [Natoma]
+/0/100/1            bridge     82371AB/EB/MB PIIX4 ISA
+/0/100/1.3          bridge     82371AB/EB/MB PIIX4 ACPI
+/0/100/3            generic    Virtio SCSI
+/0/100/3/0          generic    Virtual I/O device
+/0/100/4            display    GP100GL [Tesla P100 PCIe 16GB]
+/0/100/5            network    Virtio network device
+/0/100/5/0          network    Virtual I/O device
+/0/100/6            generic    Virtio RNG
+/0/100/6/0          generic    Virtual I/O device
+/1          eth0    network    Ethernet interface
+ 
+Wed Sep 23 05:56:39 2020       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 450.66       Driver Version: 418.67       CUDA Version: 10.1     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla P100-PCIE...  Off  | 00000000:00:04.0 Off |                    0 |
+| N/A   37C    P0    25W / 250W |      0MiB / 16280MiB |      0%      Default |
+|                               |                      |                 ERR! |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+
+fashion_mnist lenet adadelta 1
+started at 2020/09/23 07:56:47:632098
+finished at 2020/09/23 07:59:43:420766
+
+fashion_mnist lenet adadelta 2
+started at 2020/09/23 07:59:43:914719
+finished at 2020/09/23 08:02:31:911738
+
+fashion_mnist lenet adadelta 3
+started at 2020/09/23 08:02:32:397219
+finished at 2020/09/23 08:05:21:264951
+
+fashion_mnist lenet adadelta 4
+started at 2020/09/23 08:05:21:727739
+finished at 2020/09/23 08:08:09:925021
+
+fashion_mnist lenet adadelta 5
+started at 2020/09/23 08:08:10:393395
+finished at 2020/09/23 08:10:58:610658
+
+fashion_mnist lenet adadelta 6
+started at 2020/09/23 08:10:59:049236
+finished at 2020/09/23 08:13:45:576970
+
+fashion_mnist lenet adadelta 7
+started at 2020/09/23 08:13:46:216512
+finished at 2020/09/23 08:16:35:056425
+
+fashion_mnist lenet adadelta 8
+started at 2020/09/23 08:16:35:508034
+finished at 2020/09/23 08:19:22:957825
+
+fashion_mnist lenet adadelta 9
+started at 2020/09/23 08:19:23:407241
+finished at 2020/09/23 08:22:10:966941
+
+fashion_mnist lenet adadelta 10
+started at 2020/09/23 08:22:11:414138
+finished at 2020/09/23 08:24:58:846707
+
+fashion_mnist lenet adagrad 1
+started at 2020/09/23 08:24:59:710887
+finished at 2020/09/23 08:27:44:141196
+
+fashion_mnist lenet adagrad 2
+started at 2020/09/23 08:27:44:593437
+finished at 2020/09/23 08:30:29:729622
+
+fashion_mnist lenet adagrad 3
+started at 2020/09/23 08:30:30:167557
+finished at 2020/09/23 08:33:15:594546
+
+fashion_mnist lenet adagrad 4
+started at 2020/09/23 08:33:16:042401
+finished at 2020/09/23 08:36:01:476153
+
+fashion_mnist lenet adagrad 5
+started at 2020/09/23 08:36:01:926148
+finished at 2020/09/23 08:38:46:660118
+
+fashion_mnist lenet adagrad 6
+started at 2020/09/23 08:38:47:086461
+finished at 2020/09/23 08:41:31:522544
+
+fashion_mnist lenet adagrad 7
+started at 2020/09/23 08:41:31:960177
+finished at 2020/09/23 08:44:16:938872
+
+fashion_mnist lenet adagrad 8
+started at 2020/09/23 08:44:17:373840
+finished at 2020/09/23 08:47:02:254786
+
+fashion_mnist lenet adagrad 9
+started at 2020/09/23 08:47:02:695466
+finished at 2020/09/23 08:49:47:732643
+
+fashion_mnist lenet adagrad 10
+started at 2020/09/23 08:49:48:164956
+finished at 2020/09/23 08:52:32:792795
+
+fashion_mnist lenet adam 1
+started at 2020/09/23 08:52:33:656227
+finished at 2020/09/23 08:55:19:595915
+
+fashion_mnist lenet adam 2
+started at 2020/09/23 08:55:20:074099
+finished at 2020/09/23 08:58:06:853489
+
+fashion_mnist lenet adam 3
+started at 2020/09/23 08:58:07:304577
+finished at 2020/09/23 09:00:53:646752
+
+fashion_mnist lenet adam 4
+started at 2020/09/23 09:00:54:083119
+finished at 2020/09/23 09:03:39:900143
+
+fashion_mnist lenet adam 5
+started at 2020/09/23 09:03:40:332401
+finished at 2020/09/23 09:06:26:027622
+
+fashion_mnist lenet adam 6
+started at 2020/09/23 09:06:26:458560
+finished at 2020/09/23 09:09:12:526022
+
+fashion_mnist lenet adam 7
+started at 2020/09/23 09:09:12:962264
+finished at 2020/09/23 09:11:59:877190
+
+fashion_mnist lenet adam 8
+started at 2020/09/23 09:12:00:307778
+finished at 2020/09/23 09:14:45:292689
+
+fashion_mnist lenet adam 9
+started at 2020/09/23 09:14:45:727887
+finished at 2020/09/23 09:17:31:608717
+
+fashion_mnist lenet adam 10
+started at 2020/09/23 09:17:32:039821
+finished at 2020/09/23 09:20:16:977327
+
+fashion_mnist lenet adamax 1
+started at 2020/09/23 09:20:17:915746
+finished at 2020/09/23 09:23:06:067685
+
+fashion_mnist lenet adamax 2
+started at 2020/09/23 09:23:06:510837
+finished at 2020/09/23 09:25:53:224460
+
+fashion_mnist lenet adamax 3
+started at 2020/09/23 09:25:53:665993
+finished at 2020/09/23 09:28:41:822742
+
+fashion_mnist lenet adamax 4
+started at 2020/09/23 09:28:42:248086
+finished at 2020/09/23 09:31:28:987810
+
+fashion_mnist lenet adamax 5
+started at 2020/09/23 09:31:29:418901
+finished at 2020/09/23 09:34:17:025437
+
+fashion_mnist lenet adamax 6
+started at 2020/09/23 09:34:17:487554
+finished at 2020/09/23 09:37:05:288026
+
+fashion_mnist lenet adamax 7
+started at 2020/09/23 09:37:05:721149
+finished at 2020/09/23 09:39:52:390561
+
+fashion_mnist lenet adamax 8
+started at 2020/09/23 09:39:52:821981
+finished at 2020/09/23 09:42:41:013392
+
+fashion_mnist lenet adamax 9
+started at 2020/09/23 09:42:41:451533
+finished at 2020/09/23 09:45:30:269440
+
+fashion_mnist lenet adamax 10
+started at 2020/09/23 09:45:30:755745
+finished at 2020/09/23 09:48:19:453953
+
+fashion_mnist lenet momentum 1
+started at 2020/09/23 09:48:20:321540
+finished at 2020/09/23 09:51:04:964731
+
+fashion_mnist lenet momentum 2
+started at 2020/09/23 09:51:05:400303
+finished at 2020/09/23 09:53:50:060592
+
+fashion_mnist lenet momentum 3
+started at 2020/09/23 09:53:50:499282
+finished at 2020/09/23 09:56:33:985117
+
+fashion_mnist lenet momentum 4
+started at 2020/09/23 09:56:34:418832
+finished at 2020/09/23 09:59:18:915484
+
+fashion_mnist lenet momentum 5
+started at 2020/09/23 09:59:19:342764
+finished at 2020/09/23 10:02:03:288918
+
+fashion_mnist lenet momentum 6
+started at 2020/09/23 10:02:03:717510
+finished at 2020/09/23 10:04:47:221513
+
+fashion_mnist lenet momentum 7
+started at 2020/09/23 10:04:47:648045
+finished at 2020/09/23 10:07:31:173268
+
+fashion_mnist lenet momentum 8
+started at 2020/09/23 10:07:31:596820
+finished at 2020/09/23 10:10:16:192192
+
+fashion_mnist lenet momentum 9
+started at 2020/09/23 10:10:16:620290
+finished at 2020/09/23 10:12:59:999376
+
+fashion_mnist lenet momentum 10
+started at 2020/09/23 10:13:00:428639
+finished at 2020/09/23 10:15:44:038718
+
+fashion_mnist lenet nadam 1
+started at 2020/09/23 10:15:44:952639
+finished at 2020/09/23 10:18:51:555364
+
+fashion_mnist lenet nadam 2
+started at 2020/09/23 10:18:51:983621
+finished at 2020/09/23 10:21:57:784009
+
+fashion_mnist lenet nadam 3
+started at 2020/09/23 10:21:58:209430
+finished at 2020/09/23 10:25:06:037485
+
+fashion_mnist lenet nadam 4
+started at 2020/09/23 10:25:06:478644
+finished at 2020/09/23 10:28:13:040366
+
+fashion_mnist lenet nadam 5
+started at 2020/09/23 10:28:13:490149
+finished at 2020/09/23 10:31:20:193974
+
+fashion_mnist lenet nadam 6
+started at 2020/09/23 10:31:20:620808
+finished at 2020/09/23 10:34:27:362266
+
+fashion_mnist lenet nadam 7
+started at 2020/09/23 10:34:27:793728
+finished at 2020/09/23 10:37:34:682686
+
+fashion_mnist lenet nadam 8
+started at 2020/09/23 10:37:35:109757
+finished at 2020/09/23 10:40:42:877206
+
+fashion_mnist lenet nadam 9
+started at 2020/09/23 10:40:43:309984
+finished at 2020/09/23 10:43:50:518222
+
+fashion_mnist lenet nadam 10
+started at 2020/09/23 10:43:50:966547
+finished at 2020/09/23 10:46:57:858295
+
+fashion_mnist lenet nesterov 1
+started at 2020/09/23 10:46:58:643230
+finished at 2020/09/23 10:49:44:126276
+
+fashion_mnist lenet nesterov 2
+started at 2020/09/23 10:49:44:577926
+finished at 2020/09/23 10:52:29:560367
+
+fashion_mnist lenet nesterov 3
+started at 2020/09/23 10:52:29:996697
+finished at 2020/09/23 10:55:15:632837
+
+fashion_mnist lenet nesterov 4
+started at 2020/09/23 10:55:16:072093
+finished at 2020/09/23 10:58:01:075573
+
+fashion_mnist lenet nesterov 5
+started at 2020/09/23 10:58:01:506623
+finished at 2020/09/23 11:00:47:076662
+
+fashion_mnist lenet nesterov 6
+started at 2020/09/23 11:00:47:501520
+finished at 2020/09/23 11:03:32:476886
+
+fashion_mnist lenet nesterov 7
+started at 2020/09/23 11:03:32:899249
+finished at 2020/09/23 11:06:18:262138
+
+fashion_mnist lenet nesterov 8
+started at 2020/09/23 11:06:18:687993
+finished at 2020/09/23 11:09:02:468932
+
+fashion_mnist lenet nesterov 9
+started at 2020/09/23 11:09:02:898085
+finished at 2020/09/23 11:11:47:706034
+
+fashion_mnist lenet nesterov 10
+started at 2020/09/23 11:11:48:132631
+finished at 2020/09/23 11:14:31:530536
+
+fashion_mnist lenet rmsprop 1
+started at 2020/09/23 11:14:32:352032
+finished at 2020/09/23 11:17:25:079917
+
+fashion_mnist lenet rmsprop 2
+started at 2020/09/23 11:17:25:506270
+finished at 2020/09/23 11:20:17:861312
+
+fashion_mnist lenet rmsprop 3
+started at 2020/09/23 11:20:18:284470
+finished at 2020/09/23 11:23:12:263270
+
+fashion_mnist lenet rmsprop 4
+started at 2020/09/23 11:23:12:696560
+finished at 2020/09/23 11:26:06:879167
+
+fashion_mnist lenet rmsprop 5
+started at 2020/09/23 11:26:07:326524
+finished at 2020/09/23 11:29:00:679811
+
+fashion_mnist lenet rmsprop 6
+started at 2020/09/23 11:29:01:122960
+finished at 2020/09/23 11:31:54:898980
+
+fashion_mnist lenet rmsprop 7
+started at 2020/09/23 11:31:55:323787
+finished at 2020/09/23 11:34:48:668004
+
+fashion_mnist lenet rmsprop 8
+started at 2020/09/23 11:34:49:102570
+finished at 2020/09/23 11:37:42:807241
+
+fashion_mnist lenet rmsprop 9
+started at 2020/09/23 11:37:43:289116
+finished at 2020/09/23 11:40:37:904420
+
+fashion_mnist lenet rmsprop 10
+started at 2020/09/23 11:40:38:340704
+finished at 2020/09/23 11:43:32:011716
+
+fashion_mnist lenet sgd 1
+started at 2020/09/23 11:43:32:789131
+finished at 2020/09/23 11:46:15:323772
+
+fashion_mnist lenet sgd 2
+started at 2020/09/23 11:46:15:751756
+finished at 2020/09/23 11:48:58:593015
+
+fashion_mnist lenet sgd 3
+started at 2020/09/23 11:48:59:024442
+finished at 2020/09/23 11:51:43:225249
+
+fashion_mnist lenet sgd 4
+started at 2020/09/23 11:51:43:668266
+finished at 2020/09/23 11:54:26:275157
+
+fashion_mnist lenet sgd 5
+started at 2020/09/23 11:54:26:697253
+finished at 2020/09/23 11:57:10:931393
+
+fashion_mnist lenet sgd 6
+started at 2020/09/23 11:57:11:372432
+finished at 2020/09/23 11:59:53:605714
+
+fashion_mnist lenet sgd 7
+started at 2020/09/23 11:59:54:035959
+finished at 2020/09/23 12:02:36:971307
+
+fashion_mnist lenet sgd 8
+started at 2020/09/23 12:02:37:391725
+finished at 2020/09/23 12:05:18:940615
+
+fashion_mnist lenet sgd 9
+started at 2020/09/23 12:05:19:363979
+finished at 2020/09/23 12:08:02:386879
+
+fashion_mnist lenet sgd 10
+started at 2020/09/23 12:08:02:814987
+finished at 2020/09/23 12:10:45:222913
+
+cifar10 lenet adadelta 1
+started at 2020/09/23 12:41:08:505309
+finished at 2020/09/23 12:43:59:970111
+
+cifar10 lenet adadelta 2
+started at 2020/09/23 12:44:00:637281
+finished at 2020/09/23 12:46:51:323356
+
+cifar10 lenet adadelta 3
+started at 2020/09/23 12:46:51:982810
+finished at 2020/09/23 12:49:42:678808
+
+cifar10 lenet adadelta 4
+started at 2020/09/23 12:49:43:696851
+finished at 2020/09/23 12:52:34:172911
+
+cifar10 lenet adadelta 5
+started at 2020/09/23 12:52:34:843353
+finished at 2020/09/23 12:55:25:077724
+
+cifar10 lenet adadelta 6
+started at 2020/09/23 12:55:25:738505
+finished at 2020/09/23 12:58:15:286365
+
+cifar10 lenet adadelta 7
+started at 2020/09/23 12:58:15:945748
+finished at 2020/09/23 13:01:05:880558
+
+cifar10 lenet adadelta 8
+started at 2020/09/23 13:01:06:530837
+finished at 2020/09/23 13:03:56:490625
+
+cifar10 lenet adadelta 9
+started at 2020/09/23 13:03:57:157315
+finished at 2020/09/23 13:06:47:894540
+
+cifar10 lenet adadelta 10
+started at 2020/09/23 13:06:48:592250
+finished at 2020/09/23 13:09:39:331344
+
+cifar10 lenet adagrad 1
+started at 2020/09/23 13:09:40:403095
+finished at 2020/09/23 13:12:28:672383
+
+cifar10 lenet adagrad 2
+started at 2020/09/23 13:12:29:332399
+finished at 2020/09/23 13:15:18:073320
+
+cifar10 lenet adagrad 3
+started at 2020/09/23 13:15:18:733877
+finished at 2020/09/23 13:18:06:351084
+
+cifar10 lenet adagrad 4
+started at 2020/09/23 13:18:07:001629
+finished at 2020/09/23 13:20:56:341024
+
+cifar10 lenet adagrad 5
+started at 2020/09/23 13:20:57:002362
+finished at 2020/09/23 13:23:45:339912
+
+cifar10 lenet adagrad 6
+started at 2020/09/23 13:23:46:013504
+finished at 2020/09/23 13:26:34:797020
+
+cifar10 lenet adagrad 7
+started at 2020/09/23 13:26:35:449607
+finished at 2020/09/23 13:29:24:516420
+
+cifar10 lenet adagrad 8
+started at 2020/09/23 13:29:25:193497
+finished at 2020/09/23 13:32:13:900279
+
+cifar10 lenet adagrad 9
+started at 2020/09/23 13:32:14:588501
+finished at 2020/09/23 13:35:02:973212
+
+cifar10 lenet adagrad 10
+started at 2020/09/23 13:35:03:689795
+finished at 2020/09/23 13:37:52:921867
+
+cifar10 lenet adam 1
+started at 2020/09/23 13:37:53:998577
+finished at 2020/09/23 13:40:42:854593
+
+cifar10 lenet adam 2
+started at 2020/09/23 13:40:43:516155
+finished at 2020/09/23 13:43:32:418090
+
+cifar10 lenet adam 3
+started at 2020/09/23 13:43:33:089622
+finished at 2020/09/23 13:46:22:905122
+
+cifar10 lenet adam 4
+started at 2020/09/23 13:46:23:565089
+finished at 2020/09/23 13:49:12:026830
+
+cifar10 lenet adam 5
+started at 2020/09/23 13:49:12:686644
+finished at 2020/09/23 13:52:02:351111
+
+cifar10 lenet adam 6
+started at 2020/09/23 13:52:03:019365
+finished at 2020/09/23 13:54:52:784233
+
+cifar10 lenet adam 7
+started at 2020/09/23 13:54:53:450563
+finished at 2020/09/23 13:57:43:157150
+
+cifar10 lenet adam 8
+started at 2020/09/23 13:57:43:833565
+finished at 2020/09/23 14:00:32:990764
+
+cifar10 lenet adam 9
+started at 2020/09/23 14:00:33:645832
+finished at 2020/09/23 14:03:23:414505
+
+cifar10 lenet adam 10
+started at 2020/09/23 14:03:24:074680
+finished at 2020/09/23 14:06:14:010863
+
+cifar10 lenet adamax 1
+started at 2020/09/23 14:06:15:132437
+finished at 2020/09/23 14:09:04:776551
+
+cifar10 lenet adamax 2
+started at 2020/09/23 14:09:05:459729
+finished at 2020/09/23 14:11:55:818465
+
+cifar10 lenet adamax 3
+started at 2020/09/23 14:11:56:495387
+finished at 2020/09/23 14:14:46:017363
+
+cifar10 lenet adamax 4
+started at 2020/09/23 14:14:46:669893
+finished at 2020/09/23 14:17:38:365984
+
+cifar10 lenet adamax 5
+started at 2020/09/23 14:17:39:040322
+finished at 2020/09/23 14:20:30:162441
+
+cifar10 lenet adamax 6
+started at 2020/09/23 14:20:30:844499
+finished at 2020/09/23 14:23:22:368621
+
+cifar10 lenet adamax 7
+started at 2020/09/23 14:23:23:066216
+finished at 2020/09/23 14:26:13:594047
+
+cifar10 lenet adamax 8
+started at 2020/09/23 14:26:14:277436
+finished at 2020/09/23 14:29:05:210645
+
+cifar10 lenet adamax 9
+started at 2020/09/23 14:29:05:887558
+finished at 2020/09/23 14:31:56:769145
+
+cifar10 lenet adamax 10
+started at 2020/09/23 14:31:57:445243
+finished at 2020/09/23 14:34:49:329961
+
+cifar10 lenet momentum 1
+started at 2020/09/23 14:34:50:465186
+finished at 2020/09/23 14:37:38:006738
+
+cifar10 lenet momentum 2
+started at 2020/09/23 14:37:38:682393
+finished at 2020/09/23 14:40:26:137829
+
+cifar10 lenet momentum 3
+started at 2020/09/23 14:40:26:802241
+finished at 2020/09/23 14:43:15:850368
+
+cifar10 lenet momentum 4
+started at 2020/09/23 14:43:16:531507
+finished at 2020/09/23 14:46:04:465298
+
+cifar10 lenet momentum 5
+started at 2020/09/23 14:46:05:149443
+finished at 2020/09/23 14:48:54:208153
+
+cifar10 lenet momentum 6
+started at 2020/09/23 14:48:54:917926
+finished at 2020/09/23 14:51:42:538281
+
+cifar10 lenet momentum 7
+started at 2020/09/23 14:51:43:190849
+finished at 2020/09/23 14:54:31:450189
+
+cifar10 lenet momentum 8
+started at 2020/09/23 14:54:32:116731
+finished at 2020/09/23 14:57:21:291214
+
+cifar10 lenet momentum 9
+started at 2020/09/23 14:57:21:969402
+finished at 2020/09/23 15:00:10:481275
+
+cifar10 lenet momentum 10
+started at 2020/09/23 15:00:11:165635
+finished at 2020/09/23 15:02:58:823990
+
+cifar10 lenet nadam 1
+started at 2020/09/23 15:02:59:808197
+finished at 2020/09/23 15:06:07:743331
+
+cifar10 lenet nadam 2
+started at 2020/09/23 15:06:08:425741
+finished at 2020/09/23 15:09:17:120626
+
+cifar10 lenet nadam 3
+started at 2020/09/23 15:09:17:820754
+finished at 2020/09/23 15:12:25:279188
+
+cifar10 lenet nadam 4
+started at 2020/09/23 15:12:25:944981
+finished at 2020/09/23 15:15:34:188930
+
+cifar10 lenet nadam 5
+started at 2020/09/23 15:15:34:877281
+finished at 2020/09/23 15:18:42:609330
+
+cifar10 lenet nadam 6
+started at 2020/09/23 15:18:43:292278
+finished at 2020/09/23 15:21:51:106299
+
+cifar10 lenet nadam 7
+started at 2020/09/23 15:21:51:789198
+finished at 2020/09/23 15:25:01:266955
+
+cifar10 lenet nadam 8
+started at 2020/09/23 15:25:01:942528
+finished at 2020/09/23 15:28:09:314627
+
+cifar10 lenet nadam 9
+started at 2020/09/23 15:28:09:980880
+finished at 2020/09/23 15:31:18:126813
+
+cifar10 lenet nadam 10
+started at 2020/09/23 15:31:18:818028
+finished at 2020/09/23 15:34:27:664296
+
+cifar10 lenet nesterov 1
+started at 2020/09/23 15:34:28:870496
+finished at 2020/09/23 15:37:19:179993
+
+cifar10 lenet nesterov 2
+started at 2020/09/23 15:37:19:857800
+finished at 2020/09/23 15:40:08:421814
+
+cifar10 lenet nesterov 3
+started at 2020/09/23 15:40:09:088777
+finished at 2020/09/23 15:42:58:140740
+
+cifar10 lenet nesterov 4
+started at 2020/09/23 15:42:58:800982
+finished at 2020/09/23 15:45:47:304459
+
+cifar10 lenet nesterov 5
+started at 2020/09/23 15:45:47:961502
+finished at 2020/09/23 15:48:35:925104
+
+cifar10 lenet nesterov 6
+started at 2020/09/23 15:48:36:631013
+finished at 2020/09/23 15:51:25:718894
+
+cifar10 lenet nesterov 7
+started at 2020/09/23 15:51:26:408409
+finished at 2020/09/23 15:54:15:285301
+
+cifar10 lenet nesterov 8
+started at 2020/09/23 15:54:15:962368
+finished at 2020/09/23 15:57:05:806096
+
+cifar10 lenet nesterov 9
+started at 2020/09/23 15:57:06:985918
+finished at 2020/09/23 15:59:56:495887
+
+cifar10 lenet nesterov 10
+started at 2020/09/23 15:59:57:173783
+finished at 2020/09/23 16:02:47:274750
+
+cifar10 lenet rmsprop 1
+started at 2020/09/23 16:02:48:470991
+finished at 2020/09/23 16:05:46:183471
+
+cifar10 lenet rmsprop 2
+started at 2020/09/23 16:05:46:860389
+finished at 2020/09/23 16:08:43:333895
+
+cifar10 lenet rmsprop 3
+started at 2020/09/23 16:08:44:008692
+finished at 2020/09/23 16:11:40:663123
+
+cifar10 lenet rmsprop 4
+started at 2020/09/23 16:11:41:338109
+finished at 2020/09/23 16:14:37:286226
+
+cifar10 lenet rmsprop 5
+started at 2020/09/23 16:14:37:951341
+finished at 2020/09/23 16:17:35:056450
+
+cifar10 lenet rmsprop 6
+started at 2020/09/23 16:17:35:724498
+finished at 2020/09/23 16:20:31:831192
+
+cifar10 lenet rmsprop 7
+started at 2020/09/23 16:20:32:477713
+finished at 2020/09/23 16:23:28:402060
+
+cifar10 lenet rmsprop 8
+started at 2020/09/23 16:23:29:044958
+finished at 2020/09/23 16:26:24:502418
+
+cifar10 lenet rmsprop 9
+started at 2020/09/23 16:26:25:158921
+finished at 2020/09/23 16:29:19:918888
+
+cifar10 lenet rmsprop 10
+started at 2020/09/23 16:29:20:567224
+finished at 2020/09/23 16:32:16:655785
+
+cifar10 lenet sgd 1
+started at 2020/09/23 16:32:17:998782
+finished at 2020/09/23 16:35:04:329975
+
+cifar10 lenet sgd 2
+started at 2020/09/23 16:35:05:002377
+finished at 2020/09/23 16:37:51:774750
+
+cifar10 lenet sgd 3
+started at 2020/09/23 16:37:52:456511
+finished at 2020/09/23 16:40:38:591690
+
+cifar10 lenet sgd 4
+started at 2020/09/23 16:40:39:285015
+finished at 2020/09/23 16:43:25:676611
+
+cifar10 lenet sgd 5
+started at 2020/09/23 16:43:26:322847
+finished at 2020/09/23 16:46:12:174128
+
+cifar10 lenet sgd 6
+started at 2020/09/23 16:46:12:830097
+finished at 2020/09/23 16:48:58:988352
+
+cifar10 lenet sgd 7
+started at 2020/09/23 16:48:59:644012
+finished at 2020/09/23 16:51:45:231556
+
+cifar10 lenet sgd 8
+started at 2020/09/23 16:51:45:899355
+finished at 2020/09/23 16:54:32:092375
+
+cifar10 lenet sgd 9
+started at 2020/09/23 16:54:32:750450
+finished at 2020/09/23 16:57:18:340438
+
+cifar10 lenet sgd 10
+started at 2020/09/23 16:57:18:984007
+finished at 2020/09/23 17:00:04:495898

@@ -48,6 +48,12 @@ class Experiment:
         self.batch_size = c['batch_size']
         self.epochs = c['epochs']
 
+        # configure and initialize directory
+        d = self.main_dir = f'../data/{dataset_name}_{model_name}_{optimizer_name}/trial{trial_num}'
+        if os.path.exists(d):
+            shutil.rmtree(d)
+        os.makedirs(d)
+
         # configure hyperdash experiment
         self.hd_exp = HyperdashExperiment(f'{dataset_name}', api_key_getter=lambda: config['hyperdash']['api_key'])
         self.hd_exp.param('dataset_name', dataset_name)
@@ -60,17 +66,11 @@ class Experiment:
 
         # set callbacks
         self.callbacks = [
-            Hyperdash(['val_loss', 'loss', 'val_accuracy', 'accuracy'], self.hd_exp),
+            Hyperdash(['accuracy', 'loss', 'val_accuracy', 'val_loss'], self.hd_exp),
             TensorBoard(log_dir=f'{self.main_dir}/tensorboard'),
             TimeLogger(filename=f'{self.main_dir}/time.csv'),
             CSVLogger(filename=f'{self.main_dir}/result.csv', append=True)
         ]
-
-        # configure and initialize directory
-        d = self.main_dir = f'../data/{dataset_name}_{model_name}_{optimizer_name}/trial{trial_num}'
-        if os.path.exists(d):
-            shutil.rmtree(d)
-        os.makedirs(d)
 
     @logger.write
     def begin(self):
@@ -92,7 +92,7 @@ class Experiment:
         # save final scores
         score = self.model.evaluate(x_test, y_test, verbose=1)
         with open(f'{self.main_dir}/test.json', 'w') as f:
-            json.dump({'loss': score[0], 'accuracy': score[1]}, f, indent=4)
+            json.dump({'test loss': score[0], 'test accuracy': score[1]}, f, indent=4)
 
         # stop hyperdash experiment
         self.hd_exp.end()

@@ -6,6 +6,7 @@ from tensorflow.keras.layers import Conv2D
 from tensorflow.keras.layers import MaxPooling2D
 from tensorflow.keras.layers import LSTM
 from tensorflow.keras.layers import Embedding
+from tensorflow.keras.layers import Bidirectional
 from enum import Enum
 import functools
 
@@ -52,12 +53,13 @@ def get_lstm(dataset):
     """
     model = Sequential()
 
-    model.add(Embedding(input_dim=dataset.num_words, input_length=dataset.max_review_len, output_dim=dataset.embedding_vec_len))
+    model.add(Embedding(input_dim=dataset.num_words, output_dim=dataset.embedding_vec_len, input_length=dataset.max_review_len))
     model.add(Dropout(0.2))
 
-    model.add(LSTM(100))
-    model.add(Dropout(0.2))
+    model.add(Bidirectional(LSTM(64)))
 
+    model.add(Dense(256, activation='relu'))
+    model.add(Dropout(0.2))
     model.add(Dense(1, activation='sigmoid'))
 
     return model
