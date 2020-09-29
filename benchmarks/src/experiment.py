@@ -23,7 +23,7 @@ class Experiment:
         :type optimizer_name: str
         """
         # get optimized hyperparameters
-        with open(f'../../hyperopt/benchmarks/data/{benchmark_name}_{optimizer_name}/result.json') as f:
+        with open(f'../params/{benchmark_name}_{optimizer_name}/result.json') as f:
             params = json.load(f)
 
         # get instances

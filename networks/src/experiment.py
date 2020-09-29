@@ -30,7 +30,7 @@ class Experiment:
         :type trial_num: int
         """
         # get optimized hyperparameters
-        with open(f'../../hyperopt/networks/data/{dataset_name}_{model_name}_{optimizer_name}/result.json') as f:
+        with open(f'../params/{dataset_name}_{model_name}_{optimizer_name}/result.json') as f:
             params = json.load(f)
 
         # get instances
