@@ -7,7 +7,7 @@
 ## Part 1: Benchmark Comparison
 
 - Go to `benchmarks/`
-- All the data on hyperparameter tuning are stored in `hyperopt/data/[dataset name]_[optimizer name]_[model name]/`
+- All the data on hyperparameter tuning are stored in `params/[dataset name]_[optimizer name]_[model name]/`
   - The optimized values of hyperparameter are stored in `result.csv`
   - The log is stored in `log.csv`
 - All the data are stored in `data/[benchamrk name]_[optimizer name]/`
@@ -18,7 +18,7 @@
 
 - Go to `networks/`
 
-- All the data on hyperparameter tuning are stored in `hyperopt/data/[dataset name]_[model name]_[optimizer name]/`
+- All the data on hyperparameter tuning are stored in `params/[dataset name]_[model name]_[optimizer name]/`
 
   - The optimized values of hyperparameter are stored in result.csv`
   - The log is stored in `log.csv`
@@ -29,7 +29,7 @@
   - The average time taken for each epoch is stored in `time.csv`
   - TensorBoard logs are stored in `tensorboard/`
 
-- Hyperdash was for monitoring the experiments. In order to run the programs, the API key must be provided in `config.json in the following format:
+- Hyperdash was used for monitoring the experiments. In order to run the programs, the API key must be provided in `config.json in the following format:
 
   ```json
   // config.json
